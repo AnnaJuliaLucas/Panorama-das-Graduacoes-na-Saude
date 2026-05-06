@@ -1,0 +1,43 @@
+================================================================================
+ANÁLISE EXPLORATÓRIA DE DADOS - SIMAPES (NÍVEL INTERMEDIÁRIO)
+Panorama das Graduações na Saúde no Brasil
+================================================================================
+
+PASSO 1: ENTENDIMENTO INICIAL
+--------------------------------------------------------------------------------
+Base Consolidada: 1313744 registros × 46 variáveis
+Municípios: 5570
+Anos: 21
+Regiões: 5
+
+PASSO 2: LIMPEZA E INTEGRIDADE
+--------------------------------------------------------------------------------
+Valores faltantes totais: 1076130
+Registros duplicados: 0
+Taxa de completude: 98.22%
+
+PASSO 3: RESUMO ESTATÍSTICO
+--------------------------------------------------------------------------------
+       n_enfermeiros  n_odontologistas  n_fisioterapeutas
+count   1.180113e+06      1.178270e+06       1.313744e+06
+mean    4.945030e+01      3.172013e+01       1.532548e+01
+std     4.650846e+02      2.195754e+02       1.273054e+02
+min     1.000000e+00      1.000000e+00       0.000000e+00
+25%     5.000000e+00      3.000000e+00       1.000000e+00
+50%     1.000000e+01      6.000000e+00       3.000000e+00
+75%     2.100000e+01      1.500000e+01       7.000000e+00
+max     3.908400e+04      1.946100e+04       1.347900e+04
+
+PASSO 4: ANÁLISE DE DISTRIBUIÇÃO
+--------------------------------------------------------------------------------
+n_enfermeiros: 141827 outliers detectados
+n_odontologistas: 150268 outliers detectados
+n_fisioterapeutas: 153101 outliers detectados
+
+PASSO 5: ANÁLISE DE RELACIONAMENTO
+--------------------------------------------------------------------------------
+Matriz de Correlação:
+                   n_enfermeiros  n_odontologistas  n_fisioterapeutas
+n_enfermeiros           1.000000          0.913021           0.976955
+n_odontologistas        0.913021          1.000000           0.934028
+n_fisioterapeutas       0.976955          0.934028           1.000000
