@@ -16,11 +16,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
+import os
 warnings.filterwarnings('ignore')
 
 # ============================================================================
 # CONFIGURAÇÕES INICIAIS
 # ============================================================================
+
+# Diretórios
+DADOS_DIR = 'analise/dados'
+RELATORIOS_DIR = 'analise/relatorios'
+
+if not os.path.exists(RELATORIOS_DIR):
+    os.makedirs(RELATORIOS_DIR)
 
 sns.set_theme(style="whitegrid")
 plt.rcParams['figure.figsize'] = [14, 8]
@@ -37,8 +45,8 @@ print("PASSO 1: ENTENDIMENTO INICIAL - ESTRUTURA E TIPOS DE DADOS")
 print("=" * 80)
 
 # Carregamento dos dados
-df_saude = pd.read_csv('/home/ubuntu/panorama_saude.csv', sep=';', decimal=',', low_memory=False)
-df_geo = pd.read_csv('/home/ubuntu/panorama_geo.csv', sep=';')
+df_saude = pd.read_csv(f'{DADOS_DIR}/panorama_saude.csv', sep=';', decimal=',', low_memory=False)
+df_geo = pd.read_csv(f'{DADOS_DIR}/panorama_geo.csv', sep=';')
 
 print("\n--- Dimensões das Bases ---")
 print(f"Base Saúde: {df_saude.shape[0]} linhas × {df_saude.shape[1]} colunas")
@@ -142,9 +150,9 @@ for idx, prof in enumerate(profissionais):
     axes[idx].set_xlabel('Quantidade')
     axes[idx].set_ylabel('Frequência')
 plt.tight_layout()
-plt.savefig('/home/ubuntu/05_histogramas_distribuicao.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/05_histogramas_distribuicao.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 05_histogramas_distribuicao.png")
+print("[OK] Gráfico salvo: 05_histogramas_distribuicao.png")
 
 # Boxplots para identificar outliers
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -163,9 +171,9 @@ for idx, prof in enumerate(profissionais):
                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
 plt.tight_layout()
-plt.savefig('/home/ubuntu/06_boxplots_outliers.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/06_boxplots_outliers.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 06_boxplots_outliers.png")
+print("[OK] Gráfico salvo: 06_boxplots_outliers.png")
 
 # Análise de outliers
 print("\n--- Detecção de Outliers (Método IQR) ---")
@@ -196,9 +204,9 @@ sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".3f",
             square=True, linewidths=1, cbar_kws={"shrink": 0.8})
 plt.title('Matriz de Correlação: Profissionais de Saúde')
 plt.tight_layout()
-plt.savefig('/home/ubuntu/07_matriz_correlacao.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/07_matriz_correlacao.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 07_matriz_correlacao.png")
+print("[OK] Gráfico salvo: 07_matriz_correlacao.png")
 
 # Scatter plots - Relacionamentos Bivariados
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
@@ -225,9 +233,9 @@ axes[2].text(0.05, 0.95, f'r = {corr_val:.3f}', transform=axes[2].transAxes,
              verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
 plt.tight_layout()
-plt.savefig('/home/ubuntu/08_scatter_plots_bivariado.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/08_scatter_plots_bivariado.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 08_scatter_plots_bivariado.png")
+print("[OK] Gráfico salvo: 08_scatter_plots_bivariado.png")
 
 # Análise de Correlação com Infraestrutura
 print("\n--- Correlação com Infraestrutura de Saúde ---")
@@ -261,9 +269,9 @@ for idx, prof in enumerate(profissionais):
     axes[idx].tick_params(axis='x', rotation=45)
 
 plt.tight_layout()
-plt.savefig('/home/ubuntu/09_violinplot_por_regiao.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/09_violinplot_por_regiao.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 09_violinplot_por_regiao.png")
+print("[OK] Gráfico salvo: 09_violinplot_por_regiao.png")
 
 # Análise Temporal
 print("\n--- Análise Temporal ---")
@@ -279,9 +287,9 @@ ax.set_title('Evolução Temporal de Profissionais de Saúde')
 ax.legend()
 ax.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig('/home/ubuntu/10_evolucao_temporal_detalhada.png', dpi=150)
+plt.savefig(f'{RELATORIOS_DIR}/10_evolucao_temporal_detalhada.png', dpi=150)
 plt.close()
-print("✓ Gráfico salvo: 10_evolucao_temporal_detalhada.png")
+print("[OK] Gráfico salvo: 10_evolucao_temporal_detalhada.png")
 
 # Análise de Concentração
 print("\n--- Análise de Concentração (Curva de Lorenz) ---")
@@ -303,7 +311,7 @@ print("\n" + "=" * 80)
 print("RELATÓRIO FINAL - RESUMO DA AED")
 print("=" * 80)
 
-with open('/home/ubuntu/relatorio_aed_intermediario.txt', 'w', encoding='utf-8') as f:
+with open(f'{RELATORIOS_DIR}/relatorio_aed_intermediario.txt', 'w', encoding='utf-8') as f:
     f.write("=" * 80 + "\n")
     f.write("ANÁLISE EXPLORATÓRIA DE DADOS - SIMAPES (NÍVEL INTERMEDIÁRIO)\n")
     f.write("Panorama das Graduações na Saúde no Brasil\n")
@@ -340,8 +348,8 @@ with open('/home/ubuntu/relatorio_aed_intermediario.txt', 'w', encoding='utf-8')
     f.write("Matriz de Correlação:\n")
     f.write(str(corr_matrix) + "\n")
 
-print("\n✓ Relatório salvo: relatorio_aed_intermediario.txt")
-print("\n✓ Análise Exploratória de Dados concluída com sucesso!")
+print("\n[OK] Relatório salvo: relatorio_aed_intermediario.txt")
+print("\n[OK] Análise Exploratória de Dados concluída com sucesso!")
 print("\nArquivos gerados:")
 print("  - 05_histogramas_distribuicao.png")
 print("  - 06_boxplots_outliers.png")

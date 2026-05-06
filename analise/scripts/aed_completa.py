@@ -3,7 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
+import os
 warnings.filterwarnings('ignore')
+
+# Diretórios
+DADOS_DIR = 'analise/dados'
+RELATORIOS_DIR = 'analise/relatorios'
+
+if not os.path.exists(RELATORIOS_DIR):
+    os.makedirs(RELATORIOS_DIR)
 
 # Configurações de estilo
 sns.set_theme(style="whitegrid")
@@ -15,8 +23,8 @@ def perform_comprehensive_aed():
     
     # 1. Carregamento dos dados
     print("Carregando dados...")
-    df_saude = pd.read_csv('/home/ubuntu/panorama_saude.csv', sep=';', decimal=',', low_memory=False)
-    df_geo = pd.read_csv('/home/ubuntu/panorama_geo.csv', sep=';')
+    df_saude = pd.read_csv(f'{DADOS_DIR}/panorama_saude.csv', sep=';', decimal=',', low_memory=False)
+    df_geo = pd.read_csv(f'{DADOS_DIR}/panorama_geo.csv', sep=';')
     
     print(f"Base de saúde: {df_saude.shape}")
     print(f"Base geográfica: {df_geo.shape}")
@@ -70,7 +78,7 @@ def perform_comprehensive_aed():
     ax.set_xticklabels(agg_regiao['regiao'], rotation=45, ha='right')
     ax.legend()
     plt.tight_layout()
-    plt.savefig('/home/ubuntu/01_profissionais_por_regiao.png', dpi=150)
+    plt.savefig(f'{RELATORIOS_DIR}/01_profissionais_por_regiao.png', dpi=150)
     plt.close()
     
     # Gráfico 2: Evolução temporal
@@ -84,7 +92,7 @@ def perform_comprehensive_aed():
     ax.legend()
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig('/home/ubuntu/02_evolucao_temporal.png', dpi=150)
+    plt.savefig(f'{RELATORIOS_DIR}/02_evolucao_temporal.png', dpi=150)
     plt.close()
     
     # Gráfico 3: Distribuição por UF (Top 10)
@@ -102,7 +110,7 @@ def perform_comprehensive_aed():
     ax.set_xticklabels(top_ufs['uf_sigla'], rotation=0)
     ax.legend()
     plt.tight_layout()
-    plt.savefig('/home/ubuntu/03_top_ufs.png', dpi=150)
+    plt.savefig(f'{RELATORIOS_DIR}/03_top_ufs.png', dpi=150)
     plt.close()
     
     # Gráfico 4: Distribuição (Boxplot)
@@ -115,11 +123,11 @@ def perform_comprehensive_aed():
     ax.set_title('Distribuição do Número de Profissionais por Categoria')
     ax.grid(True, alpha=0.3, axis='y')
     plt.tight_layout()
-    plt.savefig('/home/ubuntu/04_distribuicao_boxplot.png', dpi=150)
+    plt.savefig(f'{RELATORIOS_DIR}/04_distribuicao_boxplot.png', dpi=150)
     plt.close()
     
     # 8. Salvar resultados em arquivo
-    with open('/home/ubuntu/resultados_aed.txt', 'w', encoding='utf-8') as f:
+    with open(f'{RELATORIOS_DIR}/resultados_aed.txt', 'w', encoding='utf-8') as f:
         f.write("=" * 80 + "\n")
         f.write("ANÁLISE EXPLORATÓRIA DE DADOS - SIMAPES\n")
         f.write("Panorama das Graduações na Saúde no Brasil\n")

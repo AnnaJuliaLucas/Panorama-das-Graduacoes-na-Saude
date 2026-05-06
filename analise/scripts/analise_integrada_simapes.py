@@ -179,4 +179,4 @@ if __name__ == "__main__":
     aluno, curso, saude_agrupada = processar_integracao(aluno, curso, geo, saude_base)
     gerar_graficos(aluno, curso, saude_agrupada)
     gerar_relatorio(aluno, curso, saude_agrupada)
-    print("\n✓ Análise concluída! Arquivos gerados em analise/relatorios/")
+    print("\n[OK] Análise concluída! Arquivos gerados em analise/relatorios/")
