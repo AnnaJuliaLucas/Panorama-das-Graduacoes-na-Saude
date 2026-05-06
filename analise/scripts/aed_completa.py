@@ -21,9 +21,12 @@ plt.rcParams['figure.figsize'] = [14, 8]
 plt.rcParams['font.size'] = 10
 
 def save_plot(filename, dpi=150):
-    plt.savefig(f'{RELATORIOS_DIR}/{filename}', dpi=dpi)
-    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename}', dpi=dpi)
-    print(f"[OK] Gráfico salvo: {filename}")
+    # Adicionando sufixo para evitar cache do navegador
+    base, ext = os.path.splitext(filename)
+    filename_v = f"{base}_v2{ext}"
+    plt.savefig(f'{RELATORIOS_DIR}/{filename_v}', dpi=dpi)
+    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename_v}', dpi=dpi)
+    print(f"[OK] Gráfico salvo: {filename_v}")
 
 def perform_comprehensive_aed():
     print("Iniciando Análise Exploratória de Dados...")
@@ -45,7 +48,9 @@ def perform_comprehensive_aed():
     print(f"Base consolidada: {df.shape}")
     
     # 3. Análise Descritiva Detalhada
-    profissionais = ['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas']
+    profissionais = ['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas', 'quantidade_esf']
+    prof_labels = {'n_enfermeiros': 'Enfermeiros', 'n_odontologistas': 'Odontologistas', 
+                   'n_fisioterapeutas': 'Fisioterapeutas', 'quantidade_esf': 'Médicos (ESF)'}
     
     # Estatísticas gerais
     stats = {}
@@ -75,9 +80,10 @@ def perform_comprehensive_aed():
     fig, ax = plt.subplots(figsize=(12, 6))
     x = np.arange(len(agg_regiao))
     width = 0.25
-    ax.bar(x - width, agg_regiao[('n_enfermeiros', 'mean')], width, label='Enfermeiros', color='#2E86AB')
-    ax.bar(x, agg_regiao[('n_odontologistas', 'mean')], width, label='Odontologistas', color='#A23B72')
-    ax.bar(x + width, agg_regiao[('n_fisioterapeutas', 'mean')], width, label='Fisioterapeutas', color='#F18F01')
+    ax.bar(x - width*1.5, agg_regiao[('n_enfermeiros', 'mean')], width, label='Enfermeiros', color='#2E86AB')
+    ax.bar(x - width/2, agg_regiao[('n_odontologistas', 'mean')], width, label='Odontologistas', color='#A23B72')
+    ax.bar(x + width/2, agg_regiao[('n_fisioterapeutas', 'mean')], width, label='Fisioterapeutas', color='#F18F01')
+    ax.bar(x + width*1.5, agg_regiao[('quantidade_esf', 'mean')], width, label='Médicos (ESF)', color='#C73E1D')
     ax.set_xlabel('Região')
     ax.set_ylabel('Média de Profissionais por Município')
     ax.set_title('Distribuição Média de Profissionais de Saúde por Região')
@@ -93,6 +99,7 @@ def perform_comprehensive_aed():
     ax.plot(agg_ano['ano_competencia'], agg_ano['n_enfermeiros'], marker='o', label='Enfermeiros', linewidth=2, color='#2E86AB')
     ax.plot(agg_ano['ano_competencia'], agg_ano['n_odontologistas'], marker='s', label='Odontologistas', linewidth=2, color='#A23B72')
     ax.plot(agg_ano['ano_competencia'], agg_ano['n_fisioterapeutas'], marker='^', label='Fisioterapeutas', linewidth=2, color='#F18F01')
+    ax.plot(agg_ano['ano_competencia'], agg_ano['quantidade_esf'], marker='D', label='Médicos (ESF)', linewidth=2, color='#C73E1D')
     ax.set_xlabel('Ano')
     ax.set_ylabel('Total de Profissionais')
     ax.set_title('Evolução Temporal do Número Total de Profissionais (2005-2025)')
@@ -107,9 +114,10 @@ def perform_comprehensive_aed():
     fig, ax = plt.subplots(figsize=(12, 6))
     x = np.arange(len(top_ufs))
     width = 0.25
-    ax.bar(x - width, top_ufs['n_enfermeiros'], width, label='Enfermeiros', color='#2E86AB')
-    ax.bar(x, top_ufs['n_odontologistas'], width, label='Odontologistas', color='#A23B72')
-    ax.bar(x + width, top_ufs['n_fisioterapeutas'], width, label='Fisioterapeutas', color='#F18F01')
+    ax.bar(x - width*1.5, top_ufs['n_enfermeiros'], width, label='Enfermeiros', color='#2E86AB')
+    ax.bar(x - width/2, top_ufs['n_odontologistas'], width, label='Odontologistas', color='#A23B72')
+    ax.bar(x + width/2, top_ufs['n_fisioterapeutas'], width, label='Fisioterapeutas', color='#F18F01')
+    ax.bar(x + width*1.5, top_ufs['quantidade_esf'], width, label='Médicos (ESF)', color='#C73E1D')
     ax.set_xlabel('Unidade Federativa')
     ax.set_ylabel('Média de Profissionais por Município')
     ax.set_title('Top 10 Estados com Maior Média de Profissionais de Saúde')
@@ -122,9 +130,10 @@ def perform_comprehensive_aed():
     
     # Gráfico 4: Distribuição (Boxplot)
     fig, ax = plt.subplots(figsize=(12, 6))
-    data_to_plot = [df['n_enfermeiros'].dropna(), df['n_odontologistas'].dropna(), df['n_fisioterapeutas'].dropna()]
-    bp = ax.boxplot(data_to_plot, labels=['Enfermeiros', 'Odontologistas', 'Fisioterapeutas'], patch_artist=True)
-    for patch, color in zip(bp['boxes'], ['#2E86AB', '#A23B72', '#F18F01']):
+    data_to_plot = [df['n_enfermeiros'].dropna(), df['n_odontologistas'].dropna(), 
+                    df['n_fisioterapeutas'].dropna(), df['quantidade_esf'].dropna()]
+    bp = ax.boxplot(data_to_plot, labels=['Enfermeiros', 'Odontologistas', 'Fisioterapeutas', 'Médicos (ESF)'], patch_artist=True)
+    for patch, color in zip(bp['boxes'], ['#2E86AB', '#A23B72', '#F18F01', '#C73E1D']):
         patch.set_facecolor(color)
     ax.set_ylabel('Número de Profissionais')
     ax.set_title('Distribuição do Número de Profissionais por Categoria')

@@ -18,26 +18,28 @@ Taxa de completude: 98.22%
 
 PASSO 3: RESUMO ESTATÍSTICO
 --------------------------------------------------------------------------------
-       n_enfermeiros  n_odontologistas  n_fisioterapeutas
-count   1.180113e+06      1.178270e+06       1.313744e+06
-mean    4.945030e+01      3.172013e+01       1.532548e+01
-std     4.650846e+02      2.195754e+02       1.273054e+02
-min     1.000000e+00      1.000000e+00       0.000000e+00
-25%     5.000000e+00      3.000000e+00       1.000000e+00
-50%     1.000000e+01      6.000000e+00       3.000000e+00
-75%     2.100000e+01      1.500000e+01       7.000000e+00
-max     3.908400e+04      1.946100e+04       1.347900e+04
+       n_enfermeiros  n_odontologistas  n_fisioterapeutas  quantidade_esf
+count   1.180113e+06      1.178270e+06       1.313744e+06    1.180201e+06
+mean    4.945030e+01      3.172013e+01       1.532548e+01    7.486592e+00
+std     4.650846e+02      2.195754e+02       1.273054e+02    2.803205e+01
+min     1.000000e+00      1.000000e+00       0.000000e+00    0.000000e+00
+25%     5.000000e+00      3.000000e+00       1.000000e+00    2.000000e+00
+50%     1.000000e+01      6.000000e+00       3.000000e+00    4.000000e+00
+75%     2.100000e+01      1.500000e+01       7.000000e+00    7.000000e+00
+max     3.908400e+04      1.946100e+04       1.347900e+04    1.724000e+03
 
 PASSO 4: ANÁLISE DE DISTRIBUIÇÃO
 --------------------------------------------------------------------------------
 n_enfermeiros: 141827 outliers detectados
 n_odontologistas: 150268 outliers detectados
 n_fisioterapeutas: 153101 outliers detectados
+quantidade_esf: 101780 outliers detectados
 
 PASSO 5: ANÁLISE DE RELACIONAMENTO
 --------------------------------------------------------------------------------
 Matriz de Correlação:
-                   n_enfermeiros  n_odontologistas  n_fisioterapeutas
-n_enfermeiros           1.000000          0.913021           0.976955
-n_odontologistas        0.913021          1.000000           0.934028
-n_fisioterapeutas       0.976955          0.934028           1.000000
+                   n_enfermeiros  n_odontologistas  n_fisioterapeutas  quantidade_esf
+n_enfermeiros           1.000000          0.913021           0.976955        0.941067
+n_odontologistas        0.913021          1.000000           0.934028        0.890093
+n_fisioterapeutas       0.976955          0.934028           1.000000        0.921787
+quantidade_esf          0.941067          0.890093           0.921787        1.000000

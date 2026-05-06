@@ -29,6 +29,7 @@ Pública     494996.0
 
 5. INSIGHTS DE MERCADO (BASE SAÚDE)
 Total de Enfermeiros Ativos (2016): 3,096,247
+Total de Médicos ESF Ativos (2016): 503,461
 Total de Odontologistas Ativos (2016): 2,141,272
 Total de Fisioterapeutas Ativos (2016): 1,057,077
 

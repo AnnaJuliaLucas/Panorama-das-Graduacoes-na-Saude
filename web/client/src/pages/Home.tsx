@@ -15,10 +15,10 @@ import { TabGeografico } from "@/components/dashboard/TabGeografico";
 import { TabMercado } from "@/components/dashboard/TabMercado";
 
 const STATIC_TABS = [
-  { value: "basica", label: "Básica", imgs: ["01_profissionais_por_regiao.png", "02_evolucao_temporal.png", "03_top_ufs.png", "04_distribuicao_boxplot.png"] },
-  { value: "distrib", label: "Distribuição", imgs: ["05_histogramas_distribuicao.png", "06_boxplots_outliers.png"] },
-  { value: "correl", label: "Correlação", imgs: ["07_matriz_correlacao.png", "08_scatter_plots_bivariado.png"] },
-  { value: "regional", label: "Regional", imgs: ["09_violinplot_por_regiao.png"] },
+  { value: "basica", label: "Básica", imgs: ["01_profissionais_por_regiao_v2.png", "02_evolucao_temporal_v2.png", "03_top_ufs_v2.png", "04_distribuicao_boxplot_v2.png"] },
+  { value: "distribuicao", label: "Distribuição", imgs: ["05_histogramas_distribuicao_v2.png", "06_boxplots_outliers_v2.png"] },
+  { value: "correlacao", label: "Correlação", imgs: ["07_matriz_correlacao_v2.png", "08_scatter_plots_bivariado_v2.png"] },
+  { value: "regional", label: "Regional", imgs: ["09_violinplot_por_regiao_v2.png", "10_evolucao_temporal_detalhada_v2.png"] },
 ];
 
 export default function Home() {

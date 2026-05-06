@@ -33,9 +33,12 @@ for d in [RELATORIOS_DIR, WEB_PUBLIC_DIR]:
         os.makedirs(d)
 
 def save_plot(filename, dpi=150):
-    plt.savefig(f'{RELATORIOS_DIR}/{filename}', dpi=dpi)
-    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename}', dpi=dpi)
-    print(f"[OK] Gráfico salvo: {filename}")
+    # Adicionando sufixo para evitar cache do navegador
+    base, ext = os.path.splitext(filename)
+    filename_v = f"{base}_v2{ext}"
+    plt.savefig(f'{RELATORIOS_DIR}/{filename_v}', dpi=dpi)
+    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename_v}', dpi=dpi)
+    print(f"[OK] Gráfico salvo: {filename_v}")
 
 sns.set_theme(style="whitegrid")
 plt.rcParams['figure.figsize'] = [14, 8]
@@ -110,7 +113,7 @@ print(f"Regiões únicas: {df['regiao'].nunique()}")
 
 # Verificar inconsistências
 print("\n--- Verificação de Inconsistências ---")
-profissionais = ['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas']
+profissionais = ['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas', 'quantidade_esf']
 for prof in profissionais:
     df[prof] = pd.to_numeric(df[prof], errors='coerce')
     negatives = (df[prof] < 0).sum()
@@ -150,7 +153,7 @@ print("PASSO 4: ANÁLISE DE DISTRIBUIÇÃO (UNIVARIADA)")
 print("=" * 80)
 
 # Histogramas com KDE
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+fig, axes = plt.subplots(1, 4, figsize=(20, 5))
 for idx, prof in enumerate(profissionais):
     sns.histplot(df[prof].dropna(), kde=True, bins=50, ax=axes[idx], color='steelblue')
     axes[idx].set_title(f'Distribuição: {prof}')
@@ -161,7 +164,7 @@ save_plot('05_histogramas_distribuicao.png')
 plt.close()
 
 # Boxplots para identificar outliers
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+fig, axes = plt.subplots(1, 4, figsize=(20, 5))
 for idx, prof in enumerate(profissionais):
     sns.boxplot(y=df[prof].dropna(), ax=axes[idx], color='lightcoral')
     axes[idx].set_title(f'Boxplot: {prof}')
@@ -262,7 +265,7 @@ print("=" * 80)
 
 # Análise por Região
 print("\n--- Análise de Variância por Região ---")
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+fig, axes = plt.subplots(1, 4, figsize=(20, 5))
 
 for idx, prof in enumerate(profissionais):
     sns.violinplot(data=df, x='regiao', y=prof, ax=axes[idx], palette='Set2')

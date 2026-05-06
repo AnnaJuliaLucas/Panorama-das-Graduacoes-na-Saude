@@ -12,9 +12,19 @@ plt.rcParams['font.size'] = 12
 # Diretórios
 DADOS_DIR = 'analise/dados'
 RELATORIOS_DIR = 'analise/relatorios'
+WEB_PUBLIC_DIR = 'web/client/public'
 
-if not os.path.exists(RELATORIOS_DIR):
-    os.makedirs(RELATORIOS_DIR)
+for d in [RELATORIOS_DIR, WEB_PUBLIC_DIR]:
+    if not os.path.exists(d):
+        os.makedirs(d)
+
+def save_plot(filename, dpi=150):
+    # Adicionando sufixo para evitar cache do navegador
+    base, ext = os.path.splitext(filename)
+    filename_v = f"{base}_v2{ext}"
+    plt.savefig(f'{RELATORIOS_DIR}/{filename_v}', dpi=dpi)
+    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename_v}', dpi=dpi)
+    print(f"[OK] Gráfico salvo: {filename_v}")
 
 def carregar_dados():
     print("Carregando bases de dados...")
@@ -23,7 +33,7 @@ def carregar_dados():
     geo = pd.read_csv(f'{DADOS_DIR}/panorama_geo.csv', sep=';', encoding='utf-8')
     
     # Otimização: Carregar apenas colunas necessárias de Saude e filtrar anos
-    cols_saude = ['ano_competencia', 'CODUFMUN', 'n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas']
+    cols_saude = ['ano_competencia', 'CODUFMUN', 'n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas', 'quantidade_esf']
     saude = pd.read_csv(f'{DADOS_DIR}/panorama_saude.csv', sep=';', usecols=cols_saude)
     saude = saude[saude['ano_competencia'].between(2010, 2016)]
     
@@ -35,7 +45,7 @@ def processar_integracao(aluno, curso, geo, saude):
     # Conversão Numérica
     for df in [aluno, curso, saude]:
         for col in df.columns:
-            if 'qt_' in col or 'n_' in col or 'vaga' in col or 'inscrito' in col:
+            if 'qt_' in col or 'n_' in col or 'vaga' in col or 'inscrito' in col or 'quantidade_' in col:
                 df[col] = pd.to_numeric(df[col].astype(str).str.replace(',', '.'), errors='coerce').fillna(0)
     
     # 1. Integração Geográfica
@@ -60,7 +70,8 @@ def processar_integracao(aluno, curso, geo, saude):
     saude_agrupada = saude.groupby(['ano_competencia', 'CODUFMUN']).agg({
         'n_enfermeiros': 'sum',
         'n_odontologistas': 'sum',
-        'n_fisioterapeutas': 'sum'
+        'n_fisioterapeutas': 'sum',
+        'quantidade_esf': 'sum'
     }).reset_index()
     
     # Adicionando Região à base Saúde
@@ -77,14 +88,14 @@ def gerar_graficos(aluno, curso, saude):
                 x='tp_ocde', y='qt_matricula_total', palette='viridis')
     plt.title('Total de Matrículas por Curso (2010-2016)')
     plt.ylabel('Nº de Matrículas')
-    plt.savefig(f'{RELATORIOS_DIR}/01_matriculas_por_curso.png')
+    save_plot('01_matriculas_por_curso.png')
     plt.close()
 
     # 02. Distribuição por Sexo e Curso (Foco em Medicina)
     plt.figure()
     sns.barplot(data=aluno, x='tp_ocde', y='qt_matricula_total', hue='sexo', estimator=sum, errorbar=None)
     plt.title('Distribuição de Matrículas por Sexo e Curso')
-    plt.savefig(f'{RELATORIOS_DIR}/02_sexo_por_curso.png')
+    save_plot('02_sexo_por_curso.png')
     plt.close()
 
     # 03. Diversidade Racial
@@ -92,7 +103,7 @@ def gerar_graficos(aluno, curso, saude):
     raca_data = aluno[~aluno['raca'].isin(['Sem Resposta', 'Aluno não quis declarar cor/raça'])]
     sns.countplot(data=raca_data, y='raca', order=raca_data['raca'].value_counts().index, palette='magma')
     plt.title('Distribuição Racial dos Alunos de Saúde')
-    plt.savefig(f'{RELATORIOS_DIR}/03_distribuicao_racial.png')
+    save_plot('03_distribuicao_racial.png')
     plt.close()
 
     # 04. Pública vs Privada: Eficiência de Formação
@@ -104,7 +115,7 @@ def gerar_graficos(aluno, curso, saude):
     eficiencia['taxa_conclusao'] = (eficiencia['qt_concluinte_total'] / eficiencia['qt_matricula_total']) * 100
     sns.barplot(data=eficiencia, x='tp_ocde', y='taxa_conclusao', hue='tipo_instituicao')
     plt.title('Taxa de Conclusão (%) por Tipo de Instituição')
-    plt.savefig(f'{RELATORIOS_DIR}/04_eficiencia_institucional.png')
+    save_plot('04_eficiencia_institucional.png')
     plt.close()
 
     # 05. Evolução Temporal da Concorrência (Vagas vs Inscritos)
@@ -112,26 +123,27 @@ def gerar_graficos(aluno, curso, saude):
     curso['concorrencia'] = curso['qt_inscrito_total'] / curso['qt_vaga_total']
     sns.lineplot(data=curso[curso['competencia'] >= 2010], x='competencia', y='concorrencia', hue='tp_ocde', marker='o')
     plt.title('Evolução da Concorrência (Candidato/Vaga)')
-    plt.savefig(f'{RELATORIOS_DIR}/05_evolucao_concorrencia.png')
+    save_plot('05_evolucao_concorrencia.png')
     plt.close()
 
     # 06. Formação vs Mercado (Integração Aluno + Saúde)
     plt.figure()
-    mercado = saude.groupby('ano_competencia')[['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas']].sum().reset_index()
+    mercado = saude.groupby('ano_competencia')[['n_enfermeiros', 'n_odontologistas', 'n_fisioterapeutas', 'quantidade_esf']].sum().reset_index()
     formacao = aluno.groupby(['competencia', 'tp_ocde'])['qt_concluinte_total'].sum().unstack().reset_index()
     
-    plt.plot(mercado['ano_competencia'], mercado['n_enfermeiros'], label='Enfermeiros no Mercado (Ativos)', marker='s', linewidth=3)
-    plt.plot(formacao['competencia'], formacao['Enfermagem'].cumsum(), label='Novos Enfermeiros (Acumulado)', linestyle='--', marker='o')
-    plt.title('Capacidade de Formação vs Profissionais em Atividade (Enfermagem)')
+    plt.plot(mercado['ano_competencia'], mercado['n_enfermeiros'], label='Enfermeiros Ativos', marker='s')
+    plt.plot(mercado['ano_competencia'], mercado['quantidade_esf'], label='Médicos (ESF) Ativos', marker='D', color='red')
+    plt.plot(formacao['competencia'], formacao['Medicina'].cumsum(), label='Novos Médicos (Acumulado)', linestyle='--', marker='o', color='darkred')
+    plt.title('Capacidade de Formação vs Profissionais em Atividade')
     plt.legend()
-    plt.savefig(f'{RELATORIOS_DIR}/06_formacao_vs_mercado.png')
+    save_plot('06_formacao_vs_mercado.png')
     plt.close()
 
     # 07. Senioridade das Instituições
     plt.figure()
     sns.boxplot(data=aluno, x='tp_ocde', y='idade_ies', palette='Set3')
     plt.title('Distribuição da "Idade" dos Cursos (Tempo de Funcionamento)')
-    plt.savefig(f'{RELATORIOS_DIR}/07_senioridade_cursos.png')
+    save_plot('07_senioridade_cursos.png')
     plt.close()
 
     # 08. Distribuição Regional (Geográfico)
@@ -139,7 +151,7 @@ def gerar_graficos(aluno, curso, saude):
     regiao_dist = aluno.groupby('regiao_pad')['qt_matricula_total'].sum().sort_values(ascending=False)
     plt.pie(regiao_dist, labels=regiao_dist.index, autopct='%1.1f%%', colors=sns.color_palette('pastel'))
     plt.title('Distribuição Regional das Matrículas')
-    plt.savefig(f'{RELATORIOS_DIR}/08_distribuicao_regional.png')
+    save_plot('08_distribuicao_regional.png')
     plt.close()
 
 def gerar_relatorio(aluno, curso, saude):
@@ -166,6 +178,7 @@ def gerar_relatorio(aluno, curso, saude):
         
         f.write("5. INSIGHTS DE MERCADO (BASE SAÚDE)\n")
         f.write(f"Total de Enfermeiros Ativos (2016): {saude[saude['ano_competencia']==2016]['n_enfermeiros'].sum():,.0f}\n")
+        f.write(f"Total de Médicos ESF Ativos (2016): {saude[saude['ano_competencia']==2016]['quantidade_esf'].sum():,.0f}\n")
         f.write(f"Total de Odontologistas Ativos (2016): {saude[saude['ano_competencia']==2016]['n_odontologistas'].sum():,.0f}\n")
         f.write(f"Total de Fisioterapeutas Ativos (2016): {saude[saude['ano_competencia']==2016]['n_fisioterapeutas'].sum():,.0f}\n\n")
         
