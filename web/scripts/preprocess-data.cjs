@@ -29,8 +29,40 @@ function toNum(val) {
 console.log('Carregando dados...');
 const alunos = parseCSV(path.join(DADOS_DIR, 'panorama_aluno.csv'));
 const cursos = parseCSV(path.join(DADOS_DIR, 'panorama_curso.csv'));
+const geo = parseCSV(path.join(DADOS_DIR, 'panorama_geo.csv'));
+const saude = parseCSV(path.join(DADOS_DIR, 'panorama_saude.csv'));
+
 console.log(`  Alunos: ${alunos.length} registros`);
 console.log(`  Cursos: ${cursos.length} registros`);
+console.log(`  Geo: ${geo.length} registros`);
+console.log(`  Saude: ${saude.length} registros`);
+
+// ======== Mapa Geográfico ========
+const geoMap = {};
+geo.forEach(r => {
+  geoMap[r.cod_municipio] = {
+    regiao: r.regiao_pad || 'Não Informado',
+    uf: r.uf_sigla || '??',
+    municipio: r.municipio_pad || 'Desconhecido'
+  };
+});
+
+function getGeo(cod) {
+  return geoMap[cod] || { regiao: 'Não Informado', uf: '??', municipio: 'Desconhecido' };
+}
+
+// ======== Enriquecer dados com Geo ========
+alunos.forEach(r => {
+  const g = getGeo(r.co_municipio);
+  r.regiao = g.regiao;
+  r.uf = g.uf;
+});
+
+cursos.forEach(r => {
+  const g = getGeo(r.co_municipio);
+  r.regiao = g.regiao;
+  r.uf = g.uf;
+});
 
 // ======== KPIs ========
 const anosAluno = [...new Set(alunos.map(r => r.competencia))].filter(Boolean).sort();
@@ -294,6 +326,66 @@ const ofertaInstTipo = cursosNomes.map(curso => {
   };
 });
 
+// ======== Geográfico (Alunos por Região) ========
+const regioes = ['REGIAO NORTE', 'REGIAO NORDESTE', 'REGIAO SUDESTE', 'REGIAO SUL', 'REGIAO CENTRO-OESTE'];
+const regioesMap = {
+  'REGIAO NORTE': 'Norte', 'REGIAO NORDESTE': 'Nordeste', 'REGIAO SUDESTE': 'Sudeste', 'REGIAO SUL': 'Sul', 'REGIAO CENTRO-OESTE': 'Centro-Oeste'
+};
+
+const porRegiao = regioes.map(reg => {
+  const rows = alunos.filter(r => r.regiao === reg);
+  return {
+    regiao: regioesMap[reg] || reg,
+    matriculas: sumField(rows, 'qt_matricula_total'),
+    concluintes: sumField(rows, 'qt_concluinte_total')
+  };
+});
+
+const porUF = [...new Set(alunos.map(r => r.uf))].filter(uf => uf !== '??').map(uf => {
+  const rows = alunos.filter(r => r.uf === uf);
+  return {
+    uf,
+    matriculas: sumField(rows, 'qt_matricula_total'),
+    concluintes: sumField(rows, 'qt_concluinte_total')
+  };
+}).sort((a, b) => b.matriculas - a.matriculas).slice(0, 10);
+
+// ======== Mercado de Trabalho (Base Saude) ========
+// Mapear CODUFMUN da base saude para regiao
+const mercadoTrabalho = anosAluno.map(ano => {
+  const entry = { ano: parseInt(ano) };
+  const rows = saude.filter(r => r.ano_competencia === ano);
+  
+  // Agregando por região para este ano
+  regioes.forEach(reg => {
+    const regRows = rows.filter(r => getGeo(r.CODUFMUN).regiao === reg);
+    entry[`${reg}_enf`] = sumField(regRows, 'n_enfermeiros');
+    entry[`${reg}_od`] = sumField(regRows, 'n_odontologistas');
+    entry[`${reg}_fis`] = sumField(regRows, 'n_fisioterapeutas');
+  });
+  
+  entry.total_enf = sumField(rows, 'n_enfermeiros');
+  entry.total_od = sumField(rows, 'n_odontologistas');
+  entry.total_fis = sumField(rows, 'n_fisioterapeutas');
+  
+  return entry;
+});
+
+// ======== Senioridade / Idade das Instituições ========
+const idadeIES = anosAluno.map(ano => {
+  const rows = alunos.filter(r => r.competencia === ano);
+  const ages = rows.map(r => {
+    const age = parseInt(ano) - parseInt(r.ano_funcionamento);
+    return isNaN(age) ? null : age;
+  }).filter(a => a !== null && a >= 0);
+  
+  const avgAge = ages.length > 0 ? ages.reduce((s, a) => s + a, 0) / ages.length : 0;
+  return {
+    ano: parseInt(ano),
+    idadeMedia: Math.round(avgAge * 10) / 10
+  };
+});
+
 // ======== Montar JSON final ========
 const dashboardData = {
   kpis,
@@ -313,7 +405,11 @@ const dashboardData = {
   vagasTemporal,
   generoInstituicao,
   racaInstituicao,
-  ofertaInstTipo
+  ofertaInstTipo,
+  porRegiao,
+  porUF,
+  mercadoTrabalho,
+  idadeIES
 };
 
 fs.writeFileSync(OUTPUT, JSON.stringify(dashboardData, null, 2), 'utf8');

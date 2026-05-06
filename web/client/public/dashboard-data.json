@@ -1346,5 +1346,263 @@
       "publica_cursos": 1002,
       "privada_cursos": 2311
     }
+  ],
+  "porRegiao": [
+    {
+      "regiao": "Norte",
+      "matriculas": 204555,
+      "concluintes": 26534
+    },
+    {
+      "regiao": "Nordeste",
+      "matriculas": 703971,
+      "concluintes": 94276
+    },
+    {
+      "regiao": "Sudeste",
+      "matriculas": 1081418,
+      "concluintes": 178793
+    },
+    {
+      "regiao": "Sul",
+      "matriculas": 299233,
+      "concluintes": 46876
+    },
+    {
+      "regiao": "Centro-Oeste",
+      "matriculas": 219485,
+      "concluintes": 32341
+    }
+  ],
+  "porUF": [
+    {
+      "uf": "SP",
+      "matriculas": 516827,
+      "concluintes": 84795
+    },
+    {
+      "uf": "MG",
+      "matriculas": 277460,
+      "concluintes": 47017
+    },
+    {
+      "uf": "RJ",
+      "matriculas": 247451,
+      "concluintes": 40277
+    },
+    {
+      "uf": "BA",
+      "matriculas": 182315,
+      "concluintes": 26998
+    },
+    {
+      "uf": "RS",
+      "matriculas": 125447,
+      "concluintes": 18380
+    },
+    {
+      "uf": "PR",
+      "matriculas": 108000,
+      "concluintes": 18384
+    },
+    {
+      "uf": "CE",
+      "matriculas": 107945,
+      "concluintes": 12517
+    },
+    {
+      "uf": "PE",
+      "matriculas": 94637,
+      "concluintes": 12955
+    },
+    {
+      "uf": "PB",
+      "matriculas": 78459,
+      "concluintes": 10109
+    },
+    {
+      "uf": "GO",
+      "matriculas": 76151,
+      "concluintes": 12615
+    }
+  ],
+  "mercadoTrabalho": [
+    {
+      "ano": 2010,
+      "REGIAO NORTE_enf": 122050,
+      "REGIAO NORTE_od": 77808,
+      "REGIAO NORTE_fis": 27438,
+      "REGIAO NORDESTE_enf": 480216,
+      "REGIAO NORDESTE_od": 375899,
+      "REGIAO NORDESTE_fis": 144518,
+      "REGIAO SUDESTE_enf": 847225,
+      "REGIAO SUDESTE_od": 815765,
+      "REGIAO SUDESTE_fis": 343161,
+      "REGIAO SUL_enf": 254061,
+      "REGIAO SUL_od": 305829,
+      "REGIAO SUL_fis": 119846,
+      "REGIAO CENTRO-OESTE_enf": 102785,
+      "REGIAO CENTRO-OESTE_od": 131256,
+      "REGIAO CENTRO-OESTE_fis": 43164,
+      "total_enf": 1827299,
+      "total_od": 1733316,
+      "total_fis": 684194
+    },
+    {
+      "ano": 2011,
+      "REGIAO NORTE_enf": 130993,
+      "REGIAO NORTE_od": 83342,
+      "REGIAO NORTE_fis": 30832,
+      "REGIAO NORDESTE_enf": 515828,
+      "REGIAO NORDESTE_od": 387713,
+      "REGIAO NORDESTE_fis": 161209,
+      "REGIAO SUDESTE_enf": 919915,
+      "REGIAO SUDESTE_od": 858452,
+      "REGIAO SUDESTE_fis": 368631,
+      "REGIAO SUL_enf": 272242,
+      "REGIAO SUL_od": 320400,
+      "REGIAO SUL_fis": 129454,
+      "REGIAO CENTRO-OESTE_enf": 111260,
+      "REGIAO CENTRO-OESTE_od": 140165,
+      "REGIAO CENTRO-OESTE_fis": 46871,
+      "total_enf": 1972772,
+      "total_od": 1819319,
+      "total_fis": 744437
+    },
+    {
+      "ano": 2012,
+      "REGIAO NORTE_enf": 142706,
+      "REGIAO NORTE_od": 89638,
+      "REGIAO NORTE_fis": 34886,
+      "REGIAO NORDESTE_enf": 566892,
+      "REGIAO NORDESTE_od": 401164,
+      "REGIAO NORDESTE_fis": 181861,
+      "REGIAO SUDESTE_enf": 1020772,
+      "REGIAO SUDESTE_od": 892697,
+      "REGIAO SUDESTE_fis": 393679,
+      "REGIAO SUL_enf": 311794,
+      "REGIAO SUL_od": 335676,
+      "REGIAO SUL_fis": 139785,
+      "REGIAO CENTRO-OESTE_enf": 123614,
+      "REGIAO CENTRO-OESTE_od": 141858,
+      "REGIAO CENTRO-OESTE_fis": 50295,
+      "total_enf": 2190561,
+      "total_od": 1889370,
+      "total_fis": 807387
+    },
+    {
+      "ano": 2013,
+      "REGIAO NORTE_enf": 157657,
+      "REGIAO NORTE_od": 96180,
+      "REGIAO NORTE_fis": 38933,
+      "REGIAO NORDESTE_enf": 620001,
+      "REGIAO NORDESTE_od": 412518,
+      "REGIAO NORDESTE_fis": 198567,
+      "REGIAO SUDESTE_enf": 1125760,
+      "REGIAO SUDESTE_od": 925660,
+      "REGIAO SUDESTE_fis": 424774,
+      "REGIAO SUL_enf": 350676,
+      "REGIAO SUL_od": 348404,
+      "REGIAO SUL_fis": 149200,
+      "REGIAO CENTRO-OESTE_enf": 139031,
+      "REGIAO CENTRO-OESTE_od": 147015,
+      "REGIAO CENTRO-OESTE_fis": 54234,
+      "total_enf": 2421515,
+      "total_od": 1959026,
+      "total_fis": 873512
+    },
+    {
+      "ano": 2014,
+      "REGIAO NORTE_enf": 180592,
+      "REGIAO NORTE_od": 103904,
+      "REGIAO NORTE_fis": 44077,
+      "REGIAO NORDESTE_enf": 682260,
+      "REGIAO NORDESTE_od": 427221,
+      "REGIAO NORDESTE_fis": 221449,
+      "REGIAO SUDESTE_enf": 1251395,
+      "REGIAO SUDESTE_od": 962175,
+      "REGIAO SUDESTE_fis": 460518,
+      "REGIAO SUL_enf": 399010,
+      "REGIAO SUL_od": 362263,
+      "REGIAO SUL_fis": 160618,
+      "REGIAO CENTRO-OESTE_enf": 156339,
+      "REGIAO CENTRO-OESTE_od": 155316,
+      "REGIAO CENTRO-OESTE_fis": 59365,
+      "total_enf": 2698889,
+      "total_od": 2040942,
+      "total_fis": 955019
+    },
+    {
+      "ano": 2015,
+      "REGIAO NORTE_enf": 197642,
+      "REGIAO NORTE_od": 107603,
+      "REGIAO NORTE_fis": 47948,
+      "REGIAO NORDESTE_enf": 725538,
+      "REGIAO NORDESTE_od": 429430,
+      "REGIAO NORDESTE_fis": 233051,
+      "REGIAO SUDESTE_enf": 1353935,
+      "REGIAO SUDESTE_od": 986026,
+      "REGIAO SUDESTE_fis": 484752,
+      "REGIAO SUL_enf": 430238,
+      "REGIAO SUL_od": 368506,
+      "REGIAO SUL_fis": 167559,
+      "REGIAO CENTRO-OESTE_enf": 168069,
+      "REGIAO CENTRO-OESTE_od": 154430,
+      "REGIAO CENTRO-OESTE_fis": 62571,
+      "total_enf": 2906325,
+      "total_od": 2071562,
+      "total_fis": 1004428
+    },
+    {
+      "ano": 2016,
+      "REGIAO NORTE_enf": 211624,
+      "REGIAO NORTE_od": 112283,
+      "REGIAO NORTE_fis": 52143,
+      "REGIAO NORDESTE_enf": 773491,
+      "REGIAO NORDESTE_od": 440479,
+      "REGIAO NORDESTE_fis": 248505,
+      "REGIAO SUDESTE_enf": 1435762,
+      "REGIAO SUDESTE_od": 1023517,
+      "REGIAO SUDESTE_fis": 504748,
+      "REGIAO SUL_enf": 459034,
+      "REGIAO SUL_od": 379695,
+      "REGIAO SUL_fis": 177264,
+      "REGIAO CENTRO-OESTE_enf": 183268,
+      "REGIAO CENTRO-OESTE_od": 158913,
+      "REGIAO CENTRO-OESTE_fis": 65373,
+      "total_enf": 3096247,
+      "total_od": 2141272,
+      "total_fis": 1057077
+    }
+  ],
+  "idadeIES": [
+    {
+      "ano": 2010,
+      "idadeMedia": 14
+    },
+    {
+      "ano": 2011,
+      "idadeMedia": 14.4
+    },
+    {
+      "ano": 2012,
+      "idadeMedia": 14.9
+    },
+    {
+      "ano": 2013,
+      "idadeMedia": 15.8
+    },
+    {
+      "ano": 2014,
+      "idadeMedia": 16.2
+    },
+    {
+      "ano": 2015,
+      "idadeMedia": 16
+    },
+    {
+      "ano": 2016,
+      "idadeMedia": 15.1
+    }
   ]
 }

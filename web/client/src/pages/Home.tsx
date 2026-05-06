@@ -11,6 +11,8 @@ import { TabRaca } from "@/components/dashboard/TabRaca";
 import { TabInstituicao } from "@/components/dashboard/TabInstituicao";
 import { TabOfertaDemanda } from "@/components/dashboard/TabOfertaDemanda";
 import { TabCruzamento } from "@/components/dashboard/TabCruzamento";
+import { TabGeografico } from "@/components/dashboard/TabGeografico";
+import { TabMercado } from "@/components/dashboard/TabMercado";
 
 const STATIC_TABS = [
   { value: "basica", label: "Básica", imgs: ["01_profissionais_por_regiao.png","02_evolucao_temporal.png","03_top_ufs.png","04_distribuicao_boxplot.png"] },
@@ -103,6 +105,8 @@ export default function Home() {
                   {[
                     { value: "visao-geral", icon: BarChart3, label: "Visão Geral" },
                     { value: "por-curso", icon: GraduationCap, label: "Por Curso" },
+                    { value: "geografico", icon: MapPin, label: "Geográfico" },
+                    { value: "mercado", icon: Activity, label: "Mercado vs. Formação" },
                     { value: "genero", icon: Users, label: "Gênero" },
                     { value: "raca", icon: Palette, label: "Raça/Cor" },
                     { value: "instituicao", icon: Building2, label: "Público vs Privado" },
@@ -121,6 +125,8 @@ export default function Home() {
               <div className="p-6">
                 <TabsContent value="visao-geral"><TabVisaoGeral data={data} /></TabsContent>
                 <TabsContent value="por-curso"><TabPorCurso data={data} /></TabsContent>
+                <TabsContent value="geografico"><TabGeografico data={data} /></TabsContent>
+                <TabsContent value="mercado"><TabMercado data={data} /></TabsContent>
                 <TabsContent value="genero"><TabGenero data={data} /></TabsContent>
                 <TabsContent value="raca"><TabRaca data={data} /></TabsContent>
                 <TabsContent value="instituicao"><TabInstituicao data={data} /></TabsContent>
