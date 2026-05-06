@@ -1,0 +1,1350 @@
+{
+  "kpis": {
+    "totalRegistrosAluno": 73016,
+    "totalRegistrosCurso": 23108,
+    "periodoAluno": "2010-2016",
+    "periodoCurso": "1995-2016",
+    "totalMatriculas": 2512076,
+    "totalConcluintes": 379127,
+    "totalIngressos": 724566,
+    "totalVagas": 3245252,
+    "totalInscritos": 17862127,
+    "iesUnicas": 855,
+    "cursosUnicos": 2122,
+    "cursosDisponiveis": [
+      "Enfermagem",
+      "Fisioterapia",
+      "Medicina",
+      "Odontologia"
+    ]
+  },
+  "porCurso": [
+    {
+      "curso": "Enfermagem",
+      "matriculas": 1132911,
+      "concluintes": 189870,
+      "ingressos": 344568,
+      "registros": 34083
+    },
+    {
+      "curso": "Fisioterapia",
+      "matriculas": 509948,
+      "concluintes": 69044,
+      "ingressos": 180252,
+      "registros": 20753
+    },
+    {
+      "curso": "Medicina",
+      "matriculas": 526758,
+      "concluintes": 72192,
+      "ingressos": 97097,
+      "registros": 8957
+    },
+    {
+      "curso": "Odontologia",
+      "matriculas": 342459,
+      "concluintes": 48021,
+      "ingressos": 102649,
+      "registros": 9223
+    }
+  ],
+  "evolucaoTemporal": [
+    {
+      "ano": 2010,
+      "Enfermagem_mat": 245092,
+      "Enfermagem_conc": 42923,
+      "Enfermagem_ing": 60555,
+      "Fisioterapia_mat": 99285,
+      "Fisioterapia_conc": 16325,
+      "Fisioterapia_ing": 26731,
+      "Medicina_mat": 103312,
+      "Medicina_conc": 12982,
+      "Medicina_ing": 17563,
+      "Odontologia_mat": 57603,
+      "Odontologia_conc": 8930,
+      "Odontologia_ing": 14728,
+      "total_mat": 505292
+    },
+    {
+      "ano": 2011,
+      "Enfermagem_mat": 244245,
+      "Enfermagem_conc": 47114,
+      "Enfermagem_ing": 62041,
+      "Fisioterapia_mat": 101208,
+      "Fisioterapia_conc": 17501,
+      "Fisioterapia_ing": 28700,
+      "Medicina_mat": 107320,
+      "Medicina_conc": 14556,
+      "Medicina_ing": 17043,
+      "Odontologia_mat": 63590,
+      "Odontologia_conc": 9637,
+      "Odontologia_ing": 16636,
+      "total_mat": 516363
+    },
+    {
+      "ano": 2012,
+      "Enfermagem_mat": 229758,
+      "Enfermagem_conc": 45659,
+      "Enfermagem_ing": 74613,
+      "Fisioterapia_mat": 101391,
+      "Fisioterapia_conc": 14679,
+      "Fisioterapia_ing": 39813,
+      "Medicina_mat": 110030,
+      "Medicina_conc": 16160,
+      "Medicina_ing": 19779,
+      "Odontologia_mat": 69744,
+      "Odontologia_conc": 10176,
+      "Odontologia_ing": 22933,
+      "total_mat": 510923
+    },
+    {
+      "ano": 2013,
+      "Enfermagem_mat": 184692,
+      "Enfermagem_conc": 25663,
+      "Enfermagem_ing": 63125,
+      "Fisioterapia_mat": 88401,
+      "Fisioterapia_conc": 9657,
+      "Fisioterapia_ing": 34973,
+      "Medicina_mat": 89641,
+      "Medicina_conc": 13050,
+      "Medicina_ing": 16783,
+      "Odontologia_mat": 62630,
+      "Odontologia_conc": 8282,
+      "Odontologia_ing": 20888,
+      "total_mat": 425364
+    },
+    {
+      "ano": 2014,
+      "Enfermagem_mat": 142773,
+      "Enfermagem_conc": 16906,
+      "Enfermagem_ing": 53975,
+      "Fisioterapia_mat": 73723,
+      "Fisioterapia_conc": 6459,
+      "Fisioterapia_ing": 32801,
+      "Medicina_mat": 71178,
+      "Medicina_conc": 9672,
+      "Medicina_ing": 15947,
+      "Odontologia_mat": 53724,
+      "Odontologia_conc": 6325,
+      "Odontologia_ing": 17296,
+      "total_mat": 341398
+    },
+    {
+      "ano": 2015,
+      "Enfermagem_mat": 74619,
+      "Enfermagem_conc": 9881,
+      "Enfermagem_ing": 26177,
+      "Fisioterapia_mat": 41146,
+      "Fisioterapia_conc": 3866,
+      "Fisioterapia_ing": 15745,
+      "Medicina_mat": 37972,
+      "Medicina_conc": 4919,
+      "Medicina_ing": 8268,
+      "Odontologia_mat": 29218,
+      "Odontologia_conc": 3781,
+      "Odontologia_ing": 8347,
+      "total_mat": 182955
+    },
+    {
+      "ano": 2016,
+      "Enfermagem_mat": 11732,
+      "Enfermagem_conc": 1724,
+      "Enfermagem_ing": 4082,
+      "Fisioterapia_mat": 4794,
+      "Fisioterapia_conc": 557,
+      "Fisioterapia_ing": 1489,
+      "Medicina_mat": 7305,
+      "Medicina_conc": 853,
+      "Medicina_ing": 1714,
+      "Odontologia_mat": 5950,
+      "Odontologia_conc": 890,
+      "Odontologia_ing": 1821,
+      "total_mat": 29781
+    }
+  ],
+  "generoPorCurso": [
+    {
+      "curso": "Enfermagem",
+      "feminino": 956936,
+      "masculino": 175975
+    },
+    {
+      "curso": "Fisioterapia",
+      "feminino": 404697,
+      "masculino": 105251
+    },
+    {
+      "curso": "Medicina",
+      "feminino": 295037,
+      "masculino": 231721
+    },
+    {
+      "curso": "Odontologia",
+      "feminino": 234093,
+      "masculino": 108366
+    }
+  ],
+  "generoTemporal": [
+    {
+      "ano": 2010,
+      "feminino": 376209,
+      "masculino": 129083
+    },
+    {
+      "ano": 2011,
+      "feminino": 386696,
+      "masculino": 129667
+    },
+    {
+      "ano": 2012,
+      "feminino": 383409,
+      "masculino": 127514
+    },
+    {
+      "ano": 2013,
+      "feminino": 322727,
+      "masculino": 102637
+    },
+    {
+      "ano": 2014,
+      "feminino": 260270,
+      "masculino": 81128
+    },
+    {
+      "ano": 2015,
+      "feminino": 138378,
+      "masculino": 44577
+    },
+    {
+      "ano": 2016,
+      "feminino": 23074,
+      "masculino": 6707
+    }
+  ],
+  "generoCursoTemporal": [
+    {
+      "ano": 2010,
+      "Enfermagem_fem": 205788,
+      "Enfermagem_masc": 39304,
+      "Enfermagem_pctFem": 84,
+      "Fisioterapia_fem": 77342,
+      "Fisioterapia_masc": 21943,
+      "Fisioterapia_pctFem": 77.9,
+      "Medicina_fem": 55498,
+      "Medicina_masc": 47814,
+      "Medicina_pctFem": 53.7,
+      "Odontologia_fem": 37581,
+      "Odontologia_masc": 20022,
+      "Odontologia_pctFem": 65.2
+    },
+    {
+      "ano": 2011,
+      "Enfermagem_fem": 206143,
+      "Enfermagem_masc": 38102,
+      "Enfermagem_pctFem": 84.4,
+      "Fisioterapia_fem": 79760,
+      "Fisioterapia_masc": 21448,
+      "Fisioterapia_pctFem": 78.8,
+      "Medicina_fem": 58290,
+      "Medicina_masc": 49030,
+      "Medicina_pctFem": 54.3,
+      "Odontologia_fem": 42503,
+      "Odontologia_masc": 21087,
+      "Odontologia_pctFem": 66.8
+    },
+    {
+      "ano": 2012,
+      "Enfermagem_fem": 194383,
+      "Enfermagem_masc": 35375,
+      "Enfermagem_pctFem": 84.6,
+      "Fisioterapia_fem": 80890,
+      "Fisioterapia_masc": 20501,
+      "Fisioterapia_pctFem": 79.8,
+      "Medicina_fem": 60244,
+      "Medicina_masc": 49786,
+      "Medicina_pctFem": 54.8,
+      "Odontologia_fem": 47892,
+      "Odontologia_masc": 21852,
+      "Odontologia_pctFem": 68.7
+    },
+    {
+      "ano": 2013,
+      "Enfermagem_fem": 158311,
+      "Enfermagem_masc": 26381,
+      "Enfermagem_pctFem": 85.7,
+      "Fisioterapia_fem": 70639,
+      "Fisioterapia_masc": 17762,
+      "Fisioterapia_pctFem": 79.9,
+      "Medicina_fem": 50375,
+      "Medicina_masc": 39266,
+      "Medicina_pctFem": 56.2,
+      "Odontologia_fem": 43402,
+      "Odontologia_masc": 19228,
+      "Odontologia_pctFem": 69.3
+    },
+    {
+      "ano": 2014,
+      "Enfermagem_fem": 121236,
+      "Enfermagem_masc": 21537,
+      "Enfermagem_pctFem": 84.9,
+      "Fisioterapia_fem": 59261,
+      "Fisioterapia_masc": 14462,
+      "Fisioterapia_pctFem": 80.4,
+      "Medicina_fem": 41531,
+      "Medicina_masc": 29647,
+      "Medicina_pctFem": 58.3,
+      "Odontologia_fem": 38242,
+      "Odontologia_masc": 15482,
+      "Odontologia_pctFem": 71.2
+    },
+    {
+      "ano": 2015,
+      "Enfermagem_fem": 61572,
+      "Enfermagem_masc": 13047,
+      "Enfermagem_pctFem": 82.5,
+      "Fisioterapia_fem": 33228,
+      "Fisioterapia_masc": 7918,
+      "Fisioterapia_pctFem": 80.8,
+      "Medicina_fem": 23429,
+      "Medicina_masc": 14543,
+      "Medicina_pctFem": 61.7,
+      "Odontologia_fem": 20149,
+      "Odontologia_masc": 9069,
+      "Odontologia_pctFem": 69
+    },
+    {
+      "ano": 2016,
+      "Enfermagem_fem": 9503,
+      "Enfermagem_masc": 2229,
+      "Enfermagem_pctFem": 81,
+      "Fisioterapia_fem": 3577,
+      "Fisioterapia_masc": 1217,
+      "Fisioterapia_pctFem": 74.6,
+      "Medicina_fem": 5670,
+      "Medicina_masc": 1635,
+      "Medicina_pctFem": 77.6,
+      "Odontologia_fem": 4324,
+      "Odontologia_masc": 1626,
+      "Odontologia_pctFem": 72.7
+    }
+  ],
+  "racaPorCurso": [
+    {
+      "curso": "Enfermagem",
+      "Branca": 213524,
+      "Parda": 185231,
+      "Preta": 40600,
+      "Amarela": 13195,
+      "Indígena": 2717,
+      "Não Declarada": 677644
+    },
+    {
+      "curso": "Fisioterapia",
+      "Branca": 110568,
+      "Parda": 74834,
+      "Preta": 16379,
+      "Amarela": 5718,
+      "Indígena": 889,
+      "Não Declarada": 301560
+    },
+    {
+      "curso": "Medicina",
+      "Branca": 173160,
+      "Parda": 45108,
+      "Preta": 12931,
+      "Amarela": 6239,
+      "Indígena": 736,
+      "Não Declarada": 288584
+    },
+    {
+      "curso": "Odontologia",
+      "Branca": 96448,
+      "Parda": 44260,
+      "Preta": 7288,
+      "Amarela": 3690,
+      "Indígena": 565,
+      "Não Declarada": 190208
+    }
+  ],
+  "racaTemporal": [
+    {
+      "ano": 2010,
+      "Branca": 97801,
+      "Parda": 50519,
+      "Preta": 11543,
+      "Amarela": 4362,
+      "Indígena": 728
+    },
+    {
+      "ano": 2011,
+      "Branca": 104257,
+      "Parda": 59791,
+      "Preta": 12110,
+      "Amarela": 4956,
+      "Indígena": 817
+    },
+    {
+      "ano": 2012,
+      "Branca": 112668,
+      "Parda": 63435,
+      "Preta": 13457,
+      "Amarela": 5121,
+      "Indígena": 853
+    },
+    {
+      "ano": 2013,
+      "Branca": 98184,
+      "Parda": 60742,
+      "Preta": 13070,
+      "Amarela": 5068,
+      "Indígena": 720
+    },
+    {
+      "ano": 2014,
+      "Branca": 101105,
+      "Parda": 65338,
+      "Preta": 14678,
+      "Amarela": 5438,
+      "Indígena": 1060
+    },
+    {
+      "ano": 2015,
+      "Branca": 67299,
+      "Parda": 41921,
+      "Preta": 10594,
+      "Amarela": 3426,
+      "Indígena": 626
+    },
+    {
+      "ano": 2016,
+      "Branca": 12386,
+      "Parda": 7687,
+      "Preta": 1746,
+      "Amarela": 471,
+      "Indígena": 103
+    }
+  ],
+  "instPorCurso": [
+    {
+      "curso": "Enfermagem",
+      "publica": 156659,
+      "privada": 971276
+    },
+    {
+      "curso": "Fisioterapia",
+      "publica": 50433,
+      "privada": 455190
+    },
+    {
+      "curso": "Medicina",
+      "publica": 196472,
+      "privada": 321981
+    },
+    {
+      "curso": "Odontologia",
+      "publica": 91432,
+      "privada": 245327
+    }
+  ],
+  "instDetalhada": {
+    "Enfermagem": [
+      {
+        "categoria": "Pública Federal",
+        "matriculas": 85990,
+        "concluintes": 12801
+      },
+      {
+        "categoria": "Pública Estadual",
+        "matriculas": 56552,
+        "concluintes": 9333
+      },
+      {
+        "categoria": "Pública Municipal",
+        "matriculas": 14117,
+        "concluintes": 2514
+      },
+      {
+        "categoria": "Privada com fins lucrativos",
+        "matriculas": 506103,
+        "concluintes": 73168
+      },
+      {
+        "categoria": "Privada sem fins lucrativos",
+        "matriculas": 465173,
+        "concluintes": 90923
+      }
+    ],
+    "Fisioterapia": [
+      {
+        "categoria": "Pública Federal",
+        "matriculas": 29164,
+        "concluintes": 3151
+      },
+      {
+        "categoria": "Pública Estadual",
+        "matriculas": 16186,
+        "concluintes": 2638
+      },
+      {
+        "categoria": "Pública Municipal",
+        "matriculas": 5083,
+        "concluintes": 905
+      },
+      {
+        "categoria": "Privada com fins lucrativos",
+        "matriculas": 217728,
+        "concluintes": 25733
+      },
+      {
+        "categoria": "Privada sem fins lucrativos",
+        "matriculas": 237462,
+        "concluintes": 35976
+      }
+    ],
+    "Medicina": [
+      {
+        "categoria": "Pública Federal",
+        "matriculas": 137629,
+        "concluintes": 19562
+      },
+      {
+        "categoria": "Pública Estadual",
+        "matriculas": 51369,
+        "concluintes": 7922
+      },
+      {
+        "categoria": "Pública Municipal",
+        "matriculas": 7474,
+        "concluintes": 1045
+      },
+      {
+        "categoria": "Privada com fins lucrativos",
+        "matriculas": 101489,
+        "concluintes": 12071
+      },
+      {
+        "categoria": "Privada sem fins lucrativos",
+        "matriculas": 220492,
+        "concluintes": 30407
+      }
+    ],
+    "Odontologia": [
+      {
+        "categoria": "Pública Federal",
+        "matriculas": 56886,
+        "concluintes": 8781
+      },
+      {
+        "categoria": "Pública Estadual",
+        "matriculas": 30525,
+        "concluintes": 5376
+      },
+      {
+        "categoria": "Pública Municipal",
+        "matriculas": 4021,
+        "concluintes": 644
+      },
+      {
+        "categoria": "Privada com fins lucrativos",
+        "matriculas": 91705,
+        "concluintes": 10082
+      },
+      {
+        "categoria": "Privada sem fins lucrativos",
+        "matriculas": 153622,
+        "concluintes": 22395
+      }
+    ]
+  },
+  "instTemporal": [
+    {
+      "ano": 2010,
+      "publica": 103920,
+      "privada": 401372
+    },
+    {
+      "ano": 2011,
+      "publica": 107540,
+      "privada": 408823
+    },
+    {
+      "ano": 2012,
+      "publica": 101954,
+      "privada": 400144
+    },
+    {
+      "ano": 2013,
+      "publica": 82913,
+      "privada": 335168
+    },
+    {
+      "ano": 2014,
+      "publica": 63427,
+      "privada": 273054
+    },
+    {
+      "ano": 2015,
+      "publica": 30292,
+      "privada": 150782
+    },
+    {
+      "ano": 2016,
+      "publica": 4950,
+      "privada": 24431
+    }
+  ],
+  "ofertaDemanda": [
+    {
+      "curso": "Enfermagem",
+      "vagas": 1587818,
+      "inscritos": 4054519,
+      "matriculas": 2899331,
+      "concluintes": 427744,
+      "concorrencia": 2.55
+    },
+    {
+      "curso": "Fisioterapia",
+      "vagas": 1040399,
+      "inscritos": 2397171,
+      "matriculas": 1743971,
+      "concluintes": 228924,
+      "concorrencia": 2.3
+    },
+    {
+      "curso": "Medicina",
+      "vagas": 271339,
+      "inscritos": 9150575,
+      "matriculas": 1512147,
+      "concluintes": 207691,
+      "concorrencia": 33.72
+    },
+    {
+      "curso": "Odontologia",
+      "vagas": 323030,
+      "inscritos": 1847173,
+      "matriculas": 1050255,
+      "concluintes": 168452,
+      "concorrencia": 5.72
+    }
+  ],
+  "concorrenciaTemporal": [
+    {
+      "ano": 1998,
+      "Enfermagem_conc": 0,
+      "Enfermagem_vagas": 0,
+      "Enfermagem_insc": 0,
+      "Fisioterapia_conc": 4.36,
+      "Fisioterapia_vagas": 14986,
+      "Fisioterapia_insc": 65272,
+      "Medicina_conc": 28.62,
+      "Medicina_vagas": 9202,
+      "Medicina_insc": 263384,
+      "Odontologia_conc": 10.4,
+      "Odontologia_vagas": 11167,
+      "Odontologia_insc": 116111
+    },
+    {
+      "ano": 1999,
+      "Enfermagem_conc": 0,
+      "Enfermagem_vagas": 0,
+      "Enfermagem_insc": 0,
+      "Fisioterapia_conc": 1.08,
+      "Fisioterapia_vagas": 19832,
+      "Fisioterapia_insc": 21376,
+      "Medicina_conc": 13.69,
+      "Medicina_vagas": 9469,
+      "Medicina_insc": 129593,
+      "Odontologia_conc": 2.85,
+      "Odontologia_vagas": 13224,
+      "Odontologia_insc": 37697
+    },
+    {
+      "ano": 2000,
+      "Enfermagem_conc": 4.65,
+      "Enfermagem_vagas": 15974,
+      "Enfermagem_insc": 74269,
+      "Fisioterapia_conc": 4.02,
+      "Fisioterapia_vagas": 25555,
+      "Fisioterapia_insc": 102801,
+      "Medicina_conc": 32.67,
+      "Medicina_vagas": 9796,
+      "Medicina_insc": 319989,
+      "Odontologia_conc": 6.98,
+      "Odontologia_vagas": 13955,
+      "Odontologia_insc": 97436
+    },
+    {
+      "ano": 2001,
+      "Enfermagem_conc": 5.63,
+      "Enfermagem_vagas": 16594,
+      "Enfermagem_insc": 93349,
+      "Fisioterapia_conc": 3.82,
+      "Fisioterapia_vagas": 26117,
+      "Fisioterapia_insc": 99760,
+      "Medicina_conc": 26.63,
+      "Medicina_vagas": 9902,
+      "Medicina_insc": 263642,
+      "Odontologia_conc": 7.07,
+      "Odontologia_vagas": 10921,
+      "Odontologia_insc": 77223
+    },
+    {
+      "ano": 2002,
+      "Enfermagem_conc": 5.91,
+      "Enfermagem_vagas": 25833,
+      "Enfermagem_insc": 152666,
+      "Fisioterapia_conc": 3.39,
+      "Fisioterapia_vagas": 32656,
+      "Fisioterapia_insc": 110646,
+      "Medicina_conc": 33.8,
+      "Medicina_vagas": 9094,
+      "Medicina_insc": 307348,
+      "Odontologia_conc": 7.05,
+      "Odontologia_vagas": 11795,
+      "Odontologia_insc": 83206
+    },
+    {
+      "ano": 2003,
+      "Enfermagem_conc": 4.99,
+      "Enfermagem_vagas": 34095,
+      "Enfermagem_insc": 170037,
+      "Fisioterapia_conc": 3.19,
+      "Fisioterapia_vagas": 35145,
+      "Fisioterapia_insc": 112204,
+      "Medicina_conc": 31.86,
+      "Medicina_vagas": 9585,
+      "Medicina_insc": 305378,
+      "Odontologia_conc": 5.82,
+      "Odontologia_vagas": 12162,
+      "Odontologia_insc": 70755
+    },
+    {
+      "ano": 2004,
+      "Enfermagem_conc": 3.74,
+      "Enfermagem_vagas": 54001,
+      "Enfermagem_insc": 202223,
+      "Fisioterapia_conc": 2.64,
+      "Fisioterapia_vagas": 44025,
+      "Fisioterapia_insc": 116129,
+      "Medicina_conc": 26.76,
+      "Medicina_vagas": 12023,
+      "Medicina_insc": 321682,
+      "Odontologia_conc": 5.49,
+      "Odontologia_vagas": 12632,
+      "Odontologia_insc": 69352
+    },
+    {
+      "ano": 2005,
+      "Enfermagem_conc": 3.11,
+      "Enfermagem_vagas": 65907,
+      "Enfermagem_insc": 204812,
+      "Fisioterapia_conc": 2.17,
+      "Fisioterapia_vagas": 49727,
+      "Fisioterapia_insc": 108045,
+      "Medicina_conc": 24.94,
+      "Medicina_vagas": 12565,
+      "Medicina_insc": 313339,
+      "Odontologia_conc": 5.02,
+      "Odontologia_vagas": 13267,
+      "Odontologia_insc": 66635
+    },
+    {
+      "ano": 2006,
+      "Enfermagem_conc": 3.01,
+      "Enfermagem_vagas": 73999,
+      "Enfermagem_insc": 222863,
+      "Fisioterapia_conc": 2.03,
+      "Fisioterapia_vagas": 50224,
+      "Fisioterapia_insc": 101738,
+      "Medicina_conc": 22.99,
+      "Medicina_vagas": 13132,
+      "Medicina_insc": 301905,
+      "Odontologia_conc": 4.6,
+      "Odontologia_vagas": 13901,
+      "Odontologia_insc": 63957
+    },
+    {
+      "ano": 2007,
+      "Enfermagem_conc": 2.66,
+      "Enfermagem_vagas": 85342,
+      "Enfermagem_insc": 226920,
+      "Fisioterapia_conc": 1.85,
+      "Fisioterapia_vagas": 56463,
+      "Fisioterapia_insc": 104256,
+      "Medicina_conc": 26.03,
+      "Medicina_vagas": 13975,
+      "Medicina_insc": 363806,
+      "Odontologia_conc": 4.16,
+      "Odontologia_vagas": 15295,
+      "Odontologia_insc": 63621
+    },
+    {
+      "ano": 2008,
+      "Enfermagem_conc": 2.44,
+      "Enfermagem_vagas": 91425,
+      "Enfermagem_insc": 223033,
+      "Fisioterapia_conc": 1.76,
+      "Fisioterapia_vagas": 58427,
+      "Fisioterapia_insc": 102705,
+      "Medicina_conc": 25.08,
+      "Medicina_vagas": 15120,
+      "Medicina_insc": 379254,
+      "Odontologia_conc": 4.23,
+      "Odontologia_vagas": 15903,
+      "Odontologia_insc": 67247
+    },
+    {
+      "ano": 2009,
+      "Enfermagem_conc": 2.12,
+      "Enfermagem_vagas": 120271,
+      "Enfermagem_insc": 254402,
+      "Fisioterapia_conc": 1.43,
+      "Fisioterapia_vagas": 73010,
+      "Fisioterapia_insc": 104590,
+      "Medicina_conc": 23.64,
+      "Medicina_vagas": 16386,
+      "Medicina_insc": 387373,
+      "Odontologia_conc": 3.27,
+      "Odontologia_vagas": 19514,
+      "Odontologia_insc": 63770
+    },
+    {
+      "ano": 2010,
+      "Enfermagem_conc": 1.94,
+      "Enfermagem_vagas": 133143,
+      "Enfermagem_insc": 257916,
+      "Fisioterapia_conc": 1.56,
+      "Fisioterapia_vagas": 71502,
+      "Fisioterapia_insc": 111498,
+      "Medicina_conc": 32.91,
+      "Medicina_vagas": 16468,
+      "Medicina_insc": 542007,
+      "Odontologia_conc": 4.29,
+      "Odontologia_vagas": 19069,
+      "Odontologia_insc": 81893
+    },
+    {
+      "ano": 2011,
+      "Enfermagem_conc": 2.47,
+      "Enfermagem_vagas": 119753,
+      "Enfermagem_insc": 295648,
+      "Fisioterapia_conc": 1.99,
+      "Fisioterapia_vagas": 68939,
+      "Fisioterapia_insc": 137102,
+      "Medicina_conc": 41.95,
+      "Medicina_vagas": 16482,
+      "Medicina_insc": 691342,
+      "Odontologia_conc": 4.94,
+      "Odontologia_vagas": 20861,
+      "Odontologia_insc": 102963
+    },
+    {
+      "ano": 2012,
+      "Enfermagem_conc": 2.83,
+      "Enfermagem_vagas": 119055,
+      "Enfermagem_insc": 337493,
+      "Fisioterapia_conc": 2.52,
+      "Fisioterapia_vagas": 66699,
+      "Fisioterapia_insc": 167797,
+      "Medicina_conc": 48.16,
+      "Medicina_vagas": 17641,
+      "Medicina_insc": 849619,
+      "Odontologia_conc": 6.54,
+      "Odontologia_vagas": 20589,
+      "Odontologia_insc": 134670
+    },
+    {
+      "ano": 2013,
+      "Enfermagem_conc": 2.42,
+      "Enfermagem_vagas": 133752,
+      "Enfermagem_insc": 324344,
+      "Fisioterapia_conc": 2.66,
+      "Fisioterapia_vagas": 69375,
+      "Fisioterapia_insc": 184365,
+      "Medicina_conc": 51.39,
+      "Medicina_vagas": 18840,
+      "Medicina_insc": 968184,
+      "Odontologia_conc": 7.4,
+      "Odontologia_vagas": 21667,
+      "Odontologia_insc": 160352
+    },
+    {
+      "ano": 2014,
+      "Enfermagem_conc": 2.18,
+      "Enfermagem_vagas": 197545,
+      "Enfermagem_insc": 430343,
+      "Fisioterapia_conc": 2.38,
+      "Fisioterapia_vagas": 112223,
+      "Fisioterapia_insc": 266627,
+      "Medicina_conc": 41.14,
+      "Medicina_vagas": 26262,
+      "Medicina_insc": 1080304,
+      "Odontologia_conc": 6.12,
+      "Odontologia_vagas": 33470,
+      "Odontologia_insc": 204737
+    },
+    {
+      "ano": 2015,
+      "Enfermagem_conc": 1.99,
+      "Enfermagem_vagas": 231360,
+      "Enfermagem_insc": 459575,
+      "Fisioterapia_conc": 2.32,
+      "Fisioterapia_vagas": 133014,
+      "Fisioterapia_insc": 308398,
+      "Medicina_conc": 38.98,
+      "Medicina_vagas": 29383,
+      "Medicina_insc": 1145264,
+      "Odontologia_conc": 6.63,
+      "Odontologia_vagas": 35758,
+      "Odontologia_insc": 237080
+    },
+    {
+      "ano": 2016,
+      "Enfermagem_conc": 1.79,
+      "Enfermagem_vagas": 69769,
+      "Enfermagem_insc": 124626,
+      "Fisioterapia_conc": 2.21,
+      "Fisioterapia_vagas": 32480,
+      "Fisioterapia_insc": 71862,
+      "Medicina_conc": 36.11,
+      "Medicina_vagas": 6014,
+      "Medicina_insc": 217162,
+      "Odontologia_conc": 6.15,
+      "Odontologia_vagas": 7880,
+      "Odontologia_insc": 48468
+    }
+  ],
+  "expansaoCursos": [
+    {
+      "ano": 1995,
+      "Enfermagem": 0,
+      "Fisioterapia": 63,
+      "Medicina": 82,
+      "Odontologia": 90,
+      "total": 235
+    },
+    {
+      "ano": 1998,
+      "Enfermagem": 0,
+      "Fisioterapia": 119,
+      "Medicina": 93,
+      "Odontologia": 115,
+      "total": 327
+    },
+    {
+      "ano": 1999,
+      "Enfermagem": 0,
+      "Fisioterapia": 146,
+      "Medicina": 97,
+      "Odontologia": 130,
+      "total": 373
+    },
+    {
+      "ano": 2000,
+      "Enfermagem": 130,
+      "Fisioterapia": 177,
+      "Medicina": 99,
+      "Odontologia": 140,
+      "total": 546
+    },
+    {
+      "ano": 2001,
+      "Enfermagem": 166,
+      "Fisioterapia": 210,
+      "Medicina": 106,
+      "Odontologia": 152,
+      "total": 634
+    },
+    {
+      "ano": 2002,
+      "Enfermagem": 236,
+      "Fisioterapia": 255,
+      "Medicina": 113,
+      "Odontologia": 158,
+      "total": 762
+    },
+    {
+      "ano": 2003,
+      "Enfermagem": 286,
+      "Fisioterapia": 296,
+      "Medicina": 125,
+      "Odontologia": 170,
+      "total": 877
+    },
+    {
+      "ano": 2004,
+      "Enfermagem": 381,
+      "Fisioterapia": 339,
+      "Medicina": 136,
+      "Odontologia": 173,
+      "total": 1029
+    },
+    {
+      "ano": 2005,
+      "Enfermagem": 447,
+      "Fisioterapia": 379,
+      "Medicina": 147,
+      "Odontologia": 176,
+      "total": 1149
+    },
+    {
+      "ano": 2006,
+      "Enfermagem": 536,
+      "Fisioterapia": 420,
+      "Medicina": 158,
+      "Odontologia": 182,
+      "total": 1296
+    },
+    {
+      "ano": 2007,
+      "Enfermagem": 611,
+      "Fisioterapia": 457,
+      "Medicina": 168,
+      "Odontologia": 190,
+      "total": 1426
+    },
+    {
+      "ano": 2008,
+      "Enfermagem": 661,
+      "Fisioterapia": 476,
+      "Medicina": 174,
+      "Odontologia": 193,
+      "total": 1504
+    },
+    {
+      "ano": 2009,
+      "Enfermagem": 755,
+      "Fisioterapia": 493,
+      "Medicina": 180,
+      "Odontologia": 196,
+      "total": 1624
+    },
+    {
+      "ano": 2010,
+      "Enfermagem": 801,
+      "Fisioterapia": 504,
+      "Medicina": 181,
+      "Odontologia": 201,
+      "total": 1687
+    },
+    {
+      "ano": 2011,
+      "Enfermagem": 826,
+      "Fisioterapia": 514,
+      "Medicina": 181,
+      "Odontologia": 209,
+      "total": 1730
+    },
+    {
+      "ano": 2012,
+      "Enfermagem": 852,
+      "Fisioterapia": 522,
+      "Medicina": 199,
+      "Odontologia": 215,
+      "total": 1788
+    },
+    {
+      "ano": 2013,
+      "Enfermagem": 851,
+      "Fisioterapia": 521,
+      "Medicina": 206,
+      "Odontologia": 219,
+      "total": 1797
+    },
+    {
+      "ano": 2014,
+      "Enfermagem": 869,
+      "Fisioterapia": 536,
+      "Medicina": 242,
+      "Odontologia": 230,
+      "total": 1877
+    },
+    {
+      "ano": 2015,
+      "Enfermagem": 889,
+      "Fisioterapia": 560,
+      "Medicina": 257,
+      "Odontologia": 241,
+      "total": 1947
+    },
+    {
+      "ano": 2016,
+      "Enfermagem": 246,
+      "Fisioterapia": 134,
+      "Medicina": 58,
+      "Odontologia": 62,
+      "total": 500
+    }
+  ],
+  "vagasTemporal": [
+    {
+      "ano": 1998,
+      "Enfermagem_vagas": 0,
+      "Enfermagem_mat": 0,
+      "Fisioterapia_vagas": 14986,
+      "Fisioterapia_mat": 34092,
+      "Medicina_vagas": 9202,
+      "Medicina_mat": 53591,
+      "Odontologia_vagas": 11167,
+      "Odontologia_mat": 49175
+    },
+    {
+      "ano": 1999,
+      "Enfermagem_vagas": 0,
+      "Enfermagem_mat": 0,
+      "Fisioterapia_vagas": 19832,
+      "Fisioterapia_mat": 44582,
+      "Medicina_vagas": 9469,
+      "Medicina_mat": 52304,
+      "Odontologia_vagas": 13224,
+      "Odontologia_mat": 43655
+    },
+    {
+      "ano": 2000,
+      "Enfermagem_vagas": 15974,
+      "Enfermagem_mat": 31385,
+      "Fisioterapia_vagas": 25555,
+      "Fisioterapia_mat": 55609,
+      "Medicina_vagas": 9796,
+      "Medicina_mat": 54812,
+      "Odontologia_vagas": 13955,
+      "Odontologia_mat": 46184
+    },
+    {
+      "ano": 2001,
+      "Enfermagem_vagas": 16594,
+      "Enfermagem_mat": 44357,
+      "Fisioterapia_vagas": 26117,
+      "Fisioterapia_mat": 71140,
+      "Medicina_vagas": 9902,
+      "Medicina_mat": 57925,
+      "Odontologia_vagas": 10921,
+      "Odontologia_mat": 47222
+    },
+    {
+      "ano": 2002,
+      "Enfermagem_vagas": 25833,
+      "Enfermagem_mat": 62796,
+      "Fisioterapia_vagas": 32656,
+      "Fisioterapia_mat": 84606,
+      "Medicina_vagas": 9094,
+      "Medicina_mat": 59726,
+      "Odontologia_vagas": 11795,
+      "Odontologia_mat": 48297
+    },
+    {
+      "ano": 2003,
+      "Enfermagem_vagas": 34095,
+      "Enfermagem_mat": 85003,
+      "Fisioterapia_vagas": 35145,
+      "Fisioterapia_mat": 94159,
+      "Medicina_vagas": 9585,
+      "Medicina_mat": 60809,
+      "Odontologia_vagas": 12162,
+      "Odontologia_mat": 47407
+    },
+    {
+      "ano": 2004,
+      "Enfermagem_vagas": 54001,
+      "Enfermagem_mat": 121158,
+      "Fisioterapia_vagas": 44025,
+      "Fisioterapia_mat": 103913,
+      "Medicina_vagas": 12023,
+      "Medicina_mat": 64965,
+      "Odontologia_vagas": 12632,
+      "Odontologia_mat": 46418
+    },
+    {
+      "ano": 2005,
+      "Enfermagem_vagas": 65907,
+      "Enfermagem_mat": 164302,
+      "Fisioterapia_vagas": 49727,
+      "Fisioterapia_mat": 112069,
+      "Medicina_vagas": 12565,
+      "Medicina_mat": 68756,
+      "Odontologia_vagas": 13267,
+      "Odontologia_mat": 47150
+    },
+    {
+      "ano": 2006,
+      "Enfermagem_vagas": 73999,
+      "Enfermagem_mat": 207233,
+      "Fisioterapia_vagas": 50224,
+      "Fisioterapia_mat": 118090,
+      "Medicina_vagas": 13132,
+      "Medicina_mat": 73882,
+      "Odontologia_vagas": 13901,
+      "Odontologia_mat": 47052
+    },
+    {
+      "ano": 2007,
+      "Enfermagem_vagas": 85342,
+      "Enfermagem_mat": 205776,
+      "Fisioterapia_vagas": 56463,
+      "Fisioterapia_mat": 106838,
+      "Medicina_vagas": 13975,
+      "Medicina_mat": 79039,
+      "Odontologia_vagas": 15295,
+      "Odontologia_mat": 46669
+    },
+    {
+      "ano": 2008,
+      "Enfermagem_vagas": 91425,
+      "Enfermagem_mat": 216245,
+      "Fisioterapia_vagas": 58427,
+      "Fisioterapia_mat": 105421,
+      "Medicina_vagas": 15120,
+      "Medicina_mat": 85306,
+      "Odontologia_vagas": 15903,
+      "Odontologia_mat": 48722
+    },
+    {
+      "ano": 2009,
+      "Enfermagem_vagas": 120271,
+      "Enfermagem_mat": 232596,
+      "Fisioterapia_vagas": 73010,
+      "Fisioterapia_mat": 98290,
+      "Medicina_vagas": 16386,
+      "Medicina_mat": 97458,
+      "Odontologia_vagas": 19514,
+      "Odontologia_mat": 53586
+    },
+    {
+      "ano": 2010,
+      "Enfermagem_vagas": 133143,
+      "Enfermagem_mat": 245092,
+      "Fisioterapia_vagas": 71502,
+      "Fisioterapia_mat": 99285,
+      "Medicina_vagas": 16468,
+      "Medicina_mat": 103312,
+      "Odontologia_vagas": 19069,
+      "Odontologia_mat": 57603
+    },
+    {
+      "ano": 2011,
+      "Enfermagem_vagas": 119753,
+      "Enfermagem_mat": 244245,
+      "Fisioterapia_vagas": 68939,
+      "Fisioterapia_mat": 101208,
+      "Medicina_vagas": 16482,
+      "Medicina_mat": 107320,
+      "Odontologia_vagas": 20861,
+      "Odontologia_mat": 63590
+    },
+    {
+      "ano": 2012,
+      "Enfermagem_vagas": 119055,
+      "Enfermagem_mat": 234714,
+      "Fisioterapia_vagas": 66699,
+      "Fisioterapia_mat": 102656,
+      "Medicina_vagas": 17641,
+      "Medicina_mat": 110804,
+      "Odontologia_vagas": 20589,
+      "Odontologia_mat": 70293
+    },
+    {
+      "ano": 2013,
+      "Enfermagem_vagas": 133752,
+      "Enfermagem_mat": 228515,
+      "Fisioterapia_vagas": 69375,
+      "Fisioterapia_mat": 109191,
+      "Medicina_vagas": 18840,
+      "Medicina_mat": 111198,
+      "Odontologia_vagas": 21667,
+      "Odontologia_mat": 78391
+    },
+    {
+      "ano": 2014,
+      "Enfermagem_vagas": 197545,
+      "Enfermagem_mat": 249527,
+      "Fisioterapia_vagas": 112223,
+      "Fisioterapia_mat": 128873,
+      "Medicina_vagas": 26262,
+      "Medicina_mat": 118510,
+      "Odontologia_vagas": 33470,
+      "Odontologia_mat": 89449
+    },
+    {
+      "ano": 2015,
+      "Enfermagem_vagas": 231360,
+      "Enfermagem_mat": 261215,
+      "Fisioterapia_vagas": 133014,
+      "Fisioterapia_mat": 141010,
+      "Medicina_vagas": 29383,
+      "Medicina_mat": 126797,
+      "Odontologia_vagas": 35758,
+      "Odontologia_mat": 99142
+    },
+    {
+      "ano": 2016,
+      "Enfermagem_vagas": 69769,
+      "Enfermagem_mat": 65172,
+      "Fisioterapia_vagas": 32480,
+      "Fisioterapia_mat": 32939,
+      "Medicina_vagas": 6014,
+      "Medicina_mat": 25633,
+      "Odontologia_vagas": 7880,
+      "Odontologia_mat": 20250
+    }
+  ],
+  "generoInstituicao": [
+    {
+      "tipo": "Pública",
+      "feminino": 330356,
+      "masculino": 164640
+    },
+    {
+      "tipo": "Privada",
+      "feminino": 1544131,
+      "masculino": 449643
+    }
+  ],
+  "racaInstituicao": [
+    {
+      "tipo": "Pública",
+      "Branca": 139504,
+      "Parda": 67005,
+      "Preta": 24115,
+      "Amarela": 6716,
+      "Indígena": 1392
+    },
+    {
+      "tipo": "Privada",
+      "Branca": 445160,
+      "Parda": 281774,
+      "Preta": 52938,
+      "Amarela": 21987,
+      "Indígena": 3501
+    }
+  ],
+  "ofertaInstTipo": [
+    {
+      "curso": "Enfermagem",
+      "publica_vagas": 103444,
+      "privada_vagas": 1479040,
+      "publica_cursos": 1812,
+      "privada_cursos": 7651
+    },
+    {
+      "curso": "Fisioterapia",
+      "publica_vagas": 48230,
+      "privada_vagas": 987116,
+      "publica_cursos": 820,
+      "privada_cursos": 6180
+    },
+    {
+      "curso": "Medicina",
+      "publica_vagas": 108722,
+      "privada_vagas": 159458,
+      "publica_cursos": 1322,
+      "privada_cursos": 1561
+    },
+    {
+      "curso": "Odontologia",
+      "publica_vagas": 67670,
+      "privada_vagas": 251644,
+      "publica_cursos": 1002,
+      "privada_cursos": 2311
+    }
+  ]
+}

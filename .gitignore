@@ -33,6 +33,5 @@ __pycache__/
 .venv/
 venv/
 
-# Large data files (CSV > 50MB)
-# Uncomment below if you don't want to track large CSVs
-# analise/dados/*.csv
+# Large data files (CSV > 100MB - GitHub limit)
+analise/dados/panorama_saude.csv
