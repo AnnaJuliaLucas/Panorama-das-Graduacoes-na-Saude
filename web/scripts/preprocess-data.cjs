@@ -362,11 +362,13 @@ const mercadoTrabalho = anosAluno.map(ano => {
     entry[`${reg}_enf`] = sumField(regRows, 'n_enfermeiros');
     entry[`${reg}_od`] = sumField(regRows, 'n_odontologistas');
     entry[`${reg}_fis`] = sumField(regRows, 'n_fisioterapeutas');
+    entry[`${reg}_esf`] = sumField(regRows, 'quantidade_esf');
   });
   
   entry.total_enf = sumField(rows, 'n_enfermeiros');
   entry.total_od = sumField(rows, 'n_odontologistas');
   entry.total_fis = sumField(rows, 'n_fisioterapeutas');
+  entry.total_esf = sumField(rows, 'quantidade_esf');
   
   return entry;
 });

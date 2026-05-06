@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from "recharts";
 
 export function TabMercado({ data }: { data: any }) {
   const { mercadoTrabalho, evolucaoTemporal } = data;
@@ -12,7 +12,9 @@ export function TabMercado({ data }: { data: any }) {
       enfermeiros_mercado: m.total_enf,
       odontologistas_mercado: m.total_od,
       fisioterapeutas_mercado: m.total_fis,
-      novos_profissionais: anoEduc ? (anoEduc.Enfermagem_conc + anoEduc.Odontologia_conc + anoEduc.Fisioterapia_conc) : 0
+      medicos_mercado: m.total_esf,
+      novos_profissionais: anoEduc ? (anoEduc.Enfermagem_conc + anoEduc.Odontologia_conc + anoEduc.Fisioterapia_conc + anoEduc.Medicina_conc) : 0,
+      novos_medicos: anoEduc ? anoEduc.Medicina_conc : 0
     };
   });
 
@@ -32,6 +34,7 @@ export function TabMercado({ data }: { data: any }) {
               <Line type="monotone" dataKey="total_enf" name="Enfermeiros" stroke="#3b82f6" strokeWidth={3} />
               <Line type="monotone" dataKey="total_od" name="Odontologistas" stroke="#10b981" strokeWidth={3} />
               <Line type="monotone" dataKey="total_fis" name="Fisioterapeutas" stroke="#8b5cf6" strokeWidth={3} />
+              <Line type="monotone" dataKey="total_esf" name="Médicos (ESF)" stroke="#ef4444" strokeWidth={3} />
             </LineChart>
           </ResponsiveContainer>
         </CardContent>
@@ -49,8 +52,8 @@ export function TabMercado({ data }: { data: any }) {
               <YAxis yAxisId="right" orientation="right" tickFormatter={(v: number) => `${(v/1000).toFixed(0)}k`} />
               <Tooltip formatter={(v: number) => v.toLocaleString('pt-BR')} />
               <Legend />
-              <Area yAxisId="left" type="monotone" dataKey="enfermeiros_mercado" name="Enfermeiros em Atividade" fill="#3b82f6" fillOpacity={0.1} stroke="#3b82f6" />
-              <Area yAxisId="right" type="monotone" dataKey="novos_profissionais" name="Novos Concluintes (Total)" fill="#f59e0b" fillOpacity={0.3} stroke="#f59e0b" />
+              <Area yAxisId="left" type="monotone" dataKey="medicos_mercado" name="Médicos (ESF) Ativos" fill="#ef4444" fillOpacity={0.1} stroke="#ef4444" />
+              <Area yAxisId="right" type="monotone" dataKey="novos_medicos" name="Novos Médicos (Concluintes)" fill="#f59e0b" fillOpacity={0.3} stroke="#f59e0b" />
             </AreaChart>
           </ResponsiveContainer>
           <div className="mt-4 p-3 bg-blue-50 rounded-lg text-sm text-slate-700">
@@ -69,9 +72,9 @@ export function TabMercado({ data }: { data: any }) {
                 <YAxis type="category" hide />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="REGIAO SUDESTE_enf" name="Sudeste (Enfermeiros)" fill="#3b82f6" />
-                <Bar dataKey="REGIAO NORDESTE_enf" name="Nordeste (Enfermeiros)" fill="#f59e0b" />
-                <Bar dataKey="REGIAO SUL_enf" name="Sul (Enfermeiros)" fill="#10b981" />
+                <Bar dataKey="REGIAO SUDESTE_esf" name="Sudeste (Médicos ESF)" fill="#ef4444" />
+                <Bar dataKey="REGIAO NORDESTE_esf" name="Nordeste (Médicos ESF)" fill="#f59e0b" />
+                <Bar dataKey="REGIAO SUL_esf" name="Sul (Médicos ESF)" fill="#10b981" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>
