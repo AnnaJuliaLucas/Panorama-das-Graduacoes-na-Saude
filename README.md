@@ -14,20 +14,15 @@ Trabalho referente a primeira avaliação da disciplina de SISTEMAS DE APOIO À 
 cd web
 pnpm install
 pnpm dev
-# Acessar: http://localhost:5173
+# Acessar: http://localhost:3001
 ```
 
 **O que você verá:**
 - Header com navegação
 - Hero section com contexto
 - 4 KPIs principais
-- **4 Abas Interativas:**
-  - Análise Básica (4 gráficos + cards por região)
-  - Distribuição (Histogramas + Boxplots com outliers)
-  - Correlação (Matriz + Scatter plots)
-  - Regional (Violin plots + Tabela de estatísticas)
-- Principais achados (6 cards)
-- CTA section
+- **Dashboards Interativos:** Visão Geral, Cursos, Gênero, Raça, Instituição, Mercado, Geográfico, Oferta & Demanda, Análise Cruzada.
+- **Gráficos Estáticos:** Sincronização automática com scripts Python.
 - Footer informativo
 
 ### 2. Executar a Análise Exploratória de Dados
@@ -35,11 +30,14 @@ pnpm dev
 ```bash
 cd analise/scripts
 
+# Análise Integrada (Cruza Alunos + Cursos + Saúde + Geo)
+python analise/scripts/analise_integrada_simapes.py
+
 # Análise básica (gera 4 gráficos)
-python3 aed_completa.py
+python analise/scripts/aed_completa.py
 
 # Análise intermediária (gera 10 gráficos + relatório)
-python3 aed_nivel_intermediario.py
+python analise/scripts/aed_nivel_intermediario.py
 ```
 
 **Pré-requisitos Python:**
@@ -96,10 +94,11 @@ pip install pandas numpy matplotlib seaborn
 | **Período** | 2005-2025 |
 | **Disparidade Sudeste/Norte** | 78% |
 | **Crescimento Enfermeiros (2007-2023)** | +785% |
+| **Crescimento Médicos (ESF)** | +340% |
 | **Crescimento Odontologistas** | +380% |
 | **Crescimento Fisioterapeutas** | +752% |
 | **Correlação Enf. ↔ Fisio.** | 0.977 (muito forte) |
-| **Correlação Enf. ↔ Odonto.** | 0.913 (forte) |
+| **Correlação Enf. ↔ Médicos (ESF)** | 0.952 (muito forte) |
 | **Outliers detectados** | ~11% por categoria |
 
 ---
