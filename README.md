@@ -1,5 +1,8 @@
-# 📊 SIMAPES - TVC 1 Completo
-## Sistema de Mapeamento da Educação na Saúde - Panorama das Graduações
+# 📊 SIMAPES - TVC 1 
+
+Sistema de Mapeamento da Educação na Saúde - Panorama das Graduações
+
+Trabalho referente a primeira avaliação da disciplina de SISTEMAS DE APOIO À DECISÃO - DCC166, ministrada pelo professor Wagner Arbex.
 
 ---
 
