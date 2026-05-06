@@ -15,9 +15,9 @@ import { TabGeografico } from "@/components/dashboard/TabGeografico";
 import { TabMercado } from "@/components/dashboard/TabMercado";
 
 const STATIC_TABS = [
-  { value: "basica", label: "Básica", imgs: ["01_profissionais_por_regiao.png","02_evolucao_temporal.png","03_top_ufs.png","04_distribuicao_boxplot.png"] },
-  { value: "distrib", label: "Distribuição", imgs: ["05_histogramas_distribuicao.png","06_boxplots_outliers.png"] },
-  { value: "correl", label: "Correlação", imgs: ["07_matriz_correlacao.png","08_scatter_plots_bivariado.png"] },
+  { value: "basica", label: "Básica", imgs: ["01_profissionais_por_regiao.png", "02_evolucao_temporal.png", "03_top_ufs.png", "04_distribuicao_boxplot.png"] },
+  { value: "distrib", label: "Distribuição", imgs: ["05_histogramas_distribuicao.png", "06_boxplots_outliers.png"] },
+  { value: "correl", label: "Correlação", imgs: ["07_matriz_correlacao.png", "08_scatter_plots_bivariado.png"] },
   { value: "regional", label: "Regional", imgs: ["09_violinplot_por_regiao.png"] },
 ];
 
@@ -75,8 +75,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">Panorama das Graduações na Saúde</h2>
           <p className="text-lg text-blue-200 max-w-3xl mx-auto mb-2">
-            Análise exploratória integrada de <strong className="text-white">96.124 registros</strong> sobre
-            Medicina, Enfermagem, Odontologia e Fisioterapia no Brasil
+            Análise exploratória integrada de <strong className="text-white">96.124 registros</strong>
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200 mt-4">
             <span className="bg-white/10 px-3 py-1 rounded-full">📊 73K registros de alunos (2010-2016)</span>
