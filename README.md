@@ -144,29 +144,32 @@ pip install pandas numpy matplotlib seaborn
 
 ## 📊 Bases de Dados
 
+### panorama_aluno.csv (15 MB)
+- **Registros:** 73.016 (alunos concluintes de 2010-2016)
+- **Variáveis:** 13
+- **Variáveis principais:**
+  - qt_matricula_total, qt_concluinte_total, qt_ingresso_total
+  - tp_ocde (Curso), sexo, raca, idade_ies
+
+### panorama_curso.csv (5 MB)
+- **Registros:** 23.108 (cursos ativos de 1995-2016)
+- **Variáveis:** 13
+- **Variáveis principais:**
+  - qt_vaga_total, qt_inscrito_total
+  - competencia, co_municipio, tp_categoria_administrativa
+
 ### panorama_saude.csv (71 MB)
 - **Registros:** 1.316.412
 - **Variáveis:** 26
 - **Período:** 2005-2025
-- **Delimitador:** `;` (ponto e vírgula)
-- **Decimais:** `,` (vírgula)
+- **Delimitador:** `;`
 - **Variáveis principais:**
-  - n_enfermeiros
-  - n_odontologistas
-  - n_fisioterapeutas
-  - quantidade_esf, quantidade_ab, quantidade_nasf
-  - lt_interna, QT_AMBULATORIOS
-  - E mais...
+  - n_enfermeiros, n_odontologistas, n_fisioterapeutas, quantidade_esf (Médicos)
 
 ### panorama_geo.csv (1.2 MB)
 - **Registros:** 5.570 municípios
-- **Variáveis:** Geográficas e regionais
-- **Delimitador:** `;`
+- **Variáveis:** 20
 - **Variáveis principais:**
-  - cod_municipio
-  - regiao
-  - uf_sigla
-  - macrorregiao
-  - E mais...
+  - cod_municipio, regiao_pad, uf_sigla
 
 ---
