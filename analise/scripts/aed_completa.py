@@ -9,14 +9,21 @@ warnings.filterwarnings('ignore')
 # Diretórios
 DADOS_DIR = 'analise/dados'
 RELATORIOS_DIR = 'analise/relatorios'
+WEB_PUBLIC_DIR = 'web/client/public'
 
-if not os.path.exists(RELATORIOS_DIR):
-    os.makedirs(RELATORIOS_DIR)
+for d in [RELATORIOS_DIR, WEB_PUBLIC_DIR]:
+    if not os.path.exists(d):
+        os.makedirs(d)
 
 # Configurações de estilo
 sns.set_theme(style="whitegrid")
 plt.rcParams['figure.figsize'] = [14, 8]
 plt.rcParams['font.size'] = 10
+
+def save_plot(filename, dpi=150):
+    plt.savefig(f'{RELATORIOS_DIR}/{filename}', dpi=dpi)
+    plt.savefig(f'{WEB_PUBLIC_DIR}/{filename}', dpi=dpi)
+    print(f"[OK] Gráfico salvo: {filename}")
 
 def perform_comprehensive_aed():
     print("Iniciando Análise Exploratória de Dados...")
@@ -78,7 +85,7 @@ def perform_comprehensive_aed():
     ax.set_xticklabels(agg_regiao['regiao'], rotation=45, ha='right')
     ax.legend()
     plt.tight_layout()
-    plt.savefig(f'{RELATORIOS_DIR}/01_profissionais_por_regiao.png', dpi=150)
+    save_plot('01_profissionais_por_regiao.png')
     plt.close()
     
     # Gráfico 2: Evolução temporal
@@ -92,7 +99,7 @@ def perform_comprehensive_aed():
     ax.legend()
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig(f'{RELATORIOS_DIR}/02_evolucao_temporal.png', dpi=150)
+    save_plot('02_evolucao_temporal.png')
     plt.close()
     
     # Gráfico 3: Distribuição por UF (Top 10)
@@ -110,7 +117,7 @@ def perform_comprehensive_aed():
     ax.set_xticklabels(top_ufs['uf_sigla'], rotation=0)
     ax.legend()
     plt.tight_layout()
-    plt.savefig(f'{RELATORIOS_DIR}/03_top_ufs.png', dpi=150)
+    save_plot('03_top_ufs.png')
     plt.close()
     
     # Gráfico 4: Distribuição (Boxplot)
@@ -123,7 +130,7 @@ def perform_comprehensive_aed():
     ax.set_title('Distribuição do Número de Profissionais por Categoria')
     ax.grid(True, alpha=0.3, axis='y')
     plt.tight_layout()
-    plt.savefig(f'{RELATORIOS_DIR}/04_distribuicao_boxplot.png', dpi=150)
+    save_plot('04_distribuicao_boxplot.png')
     plt.close()
     
     # 8. Salvar resultados em arquivo

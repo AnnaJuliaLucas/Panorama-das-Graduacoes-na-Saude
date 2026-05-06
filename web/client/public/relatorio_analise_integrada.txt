@@ -1,0 +1,38 @@
+SIMAPES - Relatório de Análise Integrada das Graduações na Saúde
+============================================================
+
+1. ESTATÍSTICAS GERAIS
+Total de Matrículas (2010-2016): 2,512,076
+Total de Concluintes (2010-2016): 379,127
+Total de Instituições Mapeadas: 854
+
+2. ANÁLISE POR CURSO
+tp_ocde
+Enfermagem      1132911.0
+Fisioterapia     509948.0
+Medicina         526758.0
+Odontologia      342459.0
+
+3. GÊNERO E RAÇA
+Percentual Feminino: 75.27%
+Top 3 Raça/Cor:
+raca
+Aluno não quis declarar cor/raça    14861
+Branca                              14055
+Sem Resposta                        13312
+
+4. NATUREZA JURÍDICA
+tipo_instituicao
+Outro        23306.0
+Privada    1993774.0
+Pública     494996.0
+
+5. INSIGHTS DE MERCADO (BASE SAÚDE)
+Total de Enfermeiros Ativos (2016): 3,096,247
+Total de Odontologistas Ativos (2016): 2,141,272
+Total de Fisioterapeutas Ativos (2016): 1,057,077
+
+6. CONCLUSÕES TÉCNICAS
+- Medicina apresenta a maior concorrência e equilíbrio de gênero.
+- Enfermagem é o curso com maior volume de profissionais ativos e novos formandos.
+- A rede privada detém a maioria absoluta das matrículas, mas a rede pública apresenta taxas de conclusão superiores em certos nichos.
