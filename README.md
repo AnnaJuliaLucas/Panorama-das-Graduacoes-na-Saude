@@ -140,23 +140,6 @@ pip install pandas numpy matplotlib seaborn
 
 ---
 
-## 📝 Documentação
-
-### Resumo Técnico-Científico
-- **Arquivo:** `documentacao/AEDPanorama das Graduações na Saúde.pdf`
-- **Formato:** Conforme normas WDCC
-- **Tamanho:** 2 páginas
-- **Conteúdo:**
-  - Resumo estruturado
-  - Introdução
-  - Metodologia
-  - Resultados (4 seções)
-  - Discussão
-  - Conclusão (3 parágrafos)
-  - 6 referências acadêmicas
-
----
-
 ## 📊 Bases de Dados
 
 ### panorama_saude.csv (71 MB)
@@ -185,39 +168,3 @@ pip install pandas numpy matplotlib seaborn
   - E mais...
 
 ---
-
-## ✅ Checklist de Entrega
-
-- [x] Análise Exploratória de Dados (nível intermediário)
-- [x] 5 passos mínimos implementados
-- [x] 9 gráficos em alta resolução
-- [x] Resumo técnico-científico (normas WDCC)
-- [x] Site web interativo com 4 abas
-- [x] Scripts Python documentados
-- [x] Bases de dados completas
-- [x] Estrutura organizada e clara
-- [x] Documentação completa
-
----
-
-## 🔗 Próximas Etapas
-
-1. **Integração com Power BI** - Criar painel interativo para gestores
-2. **API Backend** - Implementar endpoints para dados em tempo real
-3. **Filtros Dinâmicos** - Permitir exploração por ano, região, estado
-4. **Mapa Geográfico** - Visualizar distribuição de profissionais por município
-5. **Exportação de Relatórios** - Gerar PDFs com gráficos e tabelas
-
----
-
-## 📞 Informações do Projeto
-
-- **Projeto:** SIMAPES - Sistema de Mapeamento da Educação na Saúde
-- **Atividade:** TVC 1 - Sistematização e Implementação de um SAD
-- **Data:** Maio de 2026
-- **Problema de Negócio:** Ausência de plataforma centralizada para monitorar oferta e distribuição dos cursos da saúde no Brasil
-- **Hipótese:** Um painel interativo em Power BI apoia a tomada de decisão e o planejamento da força de trabalho em saúde
-
----
-
-**Status:** ✅ Completo e Pronto para Uso
